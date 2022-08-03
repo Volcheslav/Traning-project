@@ -34,7 +34,7 @@
                                 <gestureRecognizers/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, User!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fz0-8d-i1x">
-                                <rect key="frame" x="75" y="54" width="264" height="71"/>
+                                <rect key="frame" x="56.5" y="54" width="301" height="69"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="StayALive-Regular" family="Stay ALive" pointSize="58"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,7 +42,7 @@
                                 <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter some text" textAlignment="center" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="nnX-fB-4Ia">
-                                <rect key="frame" x="15" y="200" width="384" height="50"/>
+                                <rect key="frame" x="15" y="198" width="384" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6m7-J8-9fR"/>
@@ -57,7 +57,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type some text here " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1d-Vb-VSN">
-                                <rect key="frame" x="68" y="134" width="278" height="41"/>
+                                <rect key="frame" x="49" y="133" width="316.5" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" name="StayALiveAlt1-Regular" family="Stay ALive Alt1" pointSize="34"/>
@@ -65,7 +65,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error!!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3C2-Y2-Mfy">
-                                <rect key="frame" x="129" y="270" width="156.5" height="64.5"/>
+                                <rect key="frame" x="129" y="268" width="156.5" height="64.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
@@ -76,7 +76,7 @@
                                 </connections>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KH2-Jn-Ryp">
-                                <rect key="frame" x="138.5" y="785" width="137" height="62"/>
+                                <rect key="frame" x="117" y="776" width="180" height="71"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="50"/>
                                 <state key="normal" title="Push it!!">
@@ -87,7 +87,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rz-p7-RcP">
-                                <rect key="frame" x="312" y="690" width="30" height="52"/>
+                                <rect key="frame" x="307" y="683" width="40" height="59"/>
                                 <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="40"/>
                                 <state key="normal" title="-&gt;">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -97,7 +97,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="853-Yd-cc3">
-                                <rect key="frame" x="72" y="690" width="30" height="52"/>
+                                <rect key="frame" x="67" y="683" width="40" height="59"/>
                                 <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="40"/>
                                 <state key="normal" title="&lt;-">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -174,13 +174,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pez-cV-I46">
-                                <rect key="frame" x="10" y="412" width="394" height="72"/>
+                                <rect key="frame" x="10" y="413" width="394" height="70"/>
                                 <fontDescription key="fontDescription" name="StayALiveAlt1-Regular" family="Stay ALive Alt1" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFG-de-hsN">
-                                <rect key="frame" x="137.5" y="250" width="139" height="62"/>
+                                <rect key="frame" x="123" y="242" width="168" height="71"/>
                                 <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="50"/>
                                 <state key="normal" title="Next -&gt;">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -190,7 +190,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nv7-5b-AEs">
-                                <rect key="frame" x="130.5" y="736" width="153" height="47"/>
+                                <rect key="frame" x="91.5" y="730" width="231" height="53"/>
                                 <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="35"/>
                                 <state key="normal" title="to main screen">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
