@@ -142,16 +142,6 @@
             </objects>
             <point key="canvasLocation" x="-474" y="-60"/>
         </scene>
-        <!--ThirdScreen-->
-        <scene sceneID="mLH-jo-vYP">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ThirdScreen" id="At7-WJ-Mck" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="JWJ-xw-MvB"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FA6-aZ-Aph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-356" y="356"/>
-        </scene>
         <!--Red-->
         <scene sceneID="3n5-C3-aEo">
             <objects>
@@ -161,13 +151,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pez-cV-I46">
-                                <rect key="frame" x="10" y="413" width="394" height="70"/>
+                                <rect key="frame" x="10" y="412" width="394" height="72"/>
                                 <fontDescription key="fontDescription" name="StayALiveAlt1-Regular" family="Stay ALive Alt1" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFG-de-hsN">
-                                <rect key="frame" x="123" y="242" width="168" height="71"/>
+                                <rect key="frame" x="137.5" y="250" width="139" height="62"/>
                                 <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="50"/>
                                 <state key="normal" title="Next -&gt;">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -177,7 +167,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nv7-5b-AEs">
-                                <rect key="frame" x="91.5" y="730" width="231" height="53"/>
+                                <rect key="frame" x="130.5" y="736" width="153" height="47"/>
                                 <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="35"/>
                                 <state key="normal" title="to main screen">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

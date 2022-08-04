@@ -20,6 +20,18 @@
 		533AD8792897DF0F00843547 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533AD8782897DF0E00843547 /* ViewController.swift */; };
 		53403B8228901F56003AE836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53403B8128901F56003AE836 /* AppDelegate.swift */; };
 		53403B8B28901F59003AE836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53403B8A28901F59003AE836 /* Assets.xcassets */; };
+		5343CF0A289C079100B13387 /* big bang.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF09289C079100B13387 /* big bang.jpg */; };
+		5343CF0D289C079900B13387 /* universe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF0C289C079900B13387 /* universe.jpg */; };
+		5343CF10289C07A000B13387 /* rocks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF0F289C07A000B13387 /* rocks.jpg */; };
+		5343CF13289C07A800B13387 /* the dark sun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF12289C07A800B13387 /* the dark sun.jpg */; };
+		5343CF16289C07AE00B13387 /* the sun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF15289C07AE00B13387 /* the sun.jpg */; };
+		5343CF19289C07B500B13387 /* Earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF18289C07B500B13387 /* Earth.jpg */; };
+		5343CF1C289C07BC00B13387 /* Moon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF1B289C07BC00B13387 /* Moon.jpg */; };
+		5343CF1F289C07C300B13387 /* Rocket.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF1E289C07C300B13387 /* Rocket.jpg */; };
+		5343CF22289C07C900B13387 /* sphinks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF21289C07C900B13387 /* sphinks.jpg */; };
+		5343CF25289C07CF00B13387 /* spacex.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF24289C07CF00B13387 /* spacex.jpg */; };
+		5343CF28289C07D500B13387 /* mars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF27289C07D500B13387 /* mars.jpg */; };
+		5343CF2B289C0EC700B13387 /* TabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5343CF2A289C0EC700B13387 /* TabVC.swift */; };
 		539596E12898017B009D0255 /* TabBarStorybord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539596E02898017B009D0255 /* TabBarStorybord.storyboard */; };
 		539596E728980F19009D0255 /* OrangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539596E628980F19009D0255 /* OrangeVC.swift */; };
 		539596EC28980F59009D0255 /* PurpleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539596EB28980F59009D0255 /* PurpleVC.swift */; };
@@ -45,6 +57,18 @@
 		53403B8128901F56003AE836 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53403B8A28901F59003AE836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53403B8F28901F59003AE836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5343CF09289C079100B13387 /* big bang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "big bang.jpg"; sourceTree = "<group>"; };
+		5343CF0C289C079900B13387 /* universe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = universe.jpg; sourceTree = "<group>"; };
+		5343CF0F289C07A000B13387 /* rocks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rocks.jpg; sourceTree = "<group>"; };
+		5343CF12289C07A800B13387 /* the dark sun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "the dark sun.jpg"; sourceTree = "<group>"; };
+		5343CF15289C07AE00B13387 /* the sun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "the sun.jpg"; sourceTree = "<group>"; };
+		5343CF18289C07B500B13387 /* Earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Earth.jpg; sourceTree = "<group>"; };
+		5343CF1B289C07BC00B13387 /* Moon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Moon.jpg; sourceTree = "<group>"; };
+		5343CF1E289C07C300B13387 /* Rocket.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rocket.jpg; sourceTree = "<group>"; };
+		5343CF21289C07C900B13387 /* sphinks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sphinks.jpg; sourceTree = "<group>"; };
+		5343CF24289C07CF00B13387 /* spacex.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spacex.jpg; sourceTree = "<group>"; };
+		5343CF27289C07D500B13387 /* mars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mars.jpg; sourceTree = "<group>"; };
+		5343CF2A289C0EC700B13387 /* TabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabVC.swift; sourceTree = "<group>"; };
 		539596E02898017B009D0255 /* TabBarStorybord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarStorybord.storyboard; sourceTree = "<group>"; };
 		539596E628980F19009D0255 /* OrangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeVC.swift; sourceTree = "<group>"; };
 		539596EB28980F59009D0255 /* PurpleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleVC.swift; sourceTree = "<group>"; };
@@ -68,6 +92,7 @@
 		53220D2D28929E9E00CA9D06 /* Picture */ = {
 			isa = PBXGroup;
 			children = (
+				5343CF08289C070C00B13387 /* Tab pics */,
 				53E8A44B28929E3D0023C0EC /* bcgrng.jpg */,
 			);
 			path = Picture;
@@ -92,6 +117,7 @@
 				539596EB28980F59009D0255 /* PurpleVC.swift */,
 				533AD8602897DA4100843547 /* ThirdVC.swift */,
 				533AD8782897DF0E00843547 /* ViewController.swift */,
+				5343CF2A289C0EC700B13387 /* TabVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -129,6 +155,24 @@
 				53376B92289A79B600FB8AF2 /* ViewControllers */,
 			);
 			path = "Training Project";
+			sourceTree = "<group>";
+		};
+		5343CF08289C070C00B13387 /* Tab pics */ = {
+			isa = PBXGroup;
+			children = (
+				5343CF09289C079100B13387 /* big bang.jpg */,
+				5343CF0C289C079900B13387 /* universe.jpg */,
+				5343CF0F289C07A000B13387 /* rocks.jpg */,
+				5343CF12289C07A800B13387 /* the dark sun.jpg */,
+				5343CF15289C07AE00B13387 /* the sun.jpg */,
+				5343CF18289C07B500B13387 /* Earth.jpg */,
+				5343CF1B289C07BC00B13387 /* Moon.jpg */,
+				5343CF1E289C07C300B13387 /* Rocket.jpg */,
+				5343CF21289C07C900B13387 /* sphinks.jpg */,
+				5343CF24289C07CF00B13387 /* spacex.jpg */,
+				5343CF27289C07D500B13387 /* mars.jpg */,
+			);
+			path = "Tab pics";
 			sourceTree = "<group>";
 		};
 		53E413B92891774500953A5F /* Fonts */ = {
@@ -198,13 +242,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5343CF1C289C07BC00B13387 /* Moon.jpg in Resources */,
 				533AD8702897DAB300843547 /* LaunchScreen.storyboard in Resources */,
 				533AD8482897D9B100843547 /* StayALive.otf in Resources */,
 				539596E12898017B009D0255 /* TabBarStorybord.storyboard in Resources */,
+				5343CF1F289C07C300B13387 /* Rocket.jpg in Resources */,
+				5343CF19289C07B500B13387 /* Earth.jpg in Resources */,
+				5343CF28289C07D500B13387 /* mars.jpg in Resources */,
+				5343CF0A289C079100B13387 /* big bang.jpg in Resources */,
+				5343CF0D289C079900B13387 /* universe.jpg in Resources */,
+				5343CF13289C07A800B13387 /* the dark sun.jpg in Resources */,
+				5343CF25289C07CF00B13387 /* spacex.jpg in Resources */,
 				53E8A44C28929E3D0023C0EC /* bcgrng.jpg in Resources */,
+				5343CF22289C07C900B13387 /* sphinks.jpg in Resources */,
+				5343CF10289C07A000B13387 /* rocks.jpg in Resources */,
 				533AD8672897DA5900843547 /* ThirdScreen.storyboard in Resources */,
 				533AD8422897D99A00843547 /* magnifika.otf in Resources */,
 				53403B8B28901F59003AE836 /* Assets.xcassets in Resources */,
+				5343CF16289C07AE00B13387 /* the sun.jpg in Resources */,
 				533AD84C2897D9D200843547 /* Main.storyboard in Resources */,
 				53E413C2289178D600953A5F /* StayALiveAlt1.otf in Resources */,
 			);
@@ -223,6 +278,7 @@
 				533AD8792897DF0F00843547 /* ViewController.swift in Sources */,
 				539596F228981070009D0255 /* GreenVC.swift in Sources */,
 				533AD8582897DA1A00843547 /* MySecondViewController.swift in Sources */,
+				5343CF2B289C0EC700B13387 /* TabVC.swift in Sources */,
 				53403B8228901F56003AE836 /* AppDelegate.swift in Sources */,
 				533AD8612897DA4100843547 /* ThirdVC.swift in Sources */,
 				53376B94289A7A2600FB8AF2 /* BarsProtocol.swift in Sources */,

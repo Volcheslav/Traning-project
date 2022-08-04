@@ -8,15 +8,18 @@
 import UIKit
 
 class ThirdVC: UIViewController {
+    
+    
+    //private var textAndImageTuples: [(String, UIImage)] = [("The big bang", UIImage(named: "big bang")!)]
 
-    @IBOutlet weak var thirdScreenLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func goToThirdVC (sender: UIStoryboardSegue) {}
+    
     /*
     // MARK: - Navigation
 

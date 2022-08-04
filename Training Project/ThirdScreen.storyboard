@@ -8,8 +8,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="StayALiveAlt1.otf">
-            <string>StayALiveAlt1-Regular</string>
+        <array key="magnifika.otf">
+            <string>Magnifka</string>
         </array>
     </customFonts>
     <scenes>
@@ -21,27 +21,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65k-KU-7R4">
-                                <rect key="frame" x="153.5" y="418" width="107" height="60"/>
-                                <fontDescription key="fontDescription" name="StayALiveAlt1-Regular" family="Stay ALive Alt1" pointSize="50"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmS-0J-uhM">
+                                <rect key="frame" x="98" y="417" width="218" height="62"/>
+                                <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="50"/>
+                                <state key="normal" title="Go to table -&gt;">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ybS-Qi-uSq" kind="show" identifier="goToTable" id="Et9-fQ-uI1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DJ8-ye-pWJ"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="65k-KU-7R4" firstAttribute="centerY" secondItem="wUT-vC-sUJ" secondAttribute="centerY" id="oYQ-ZG-pnh"/>
-                            <constraint firstItem="65k-KU-7R4" firstAttribute="centerX" secondItem="wUT-vC-sUJ" secondAttribute="centerX" id="xnX-Yo-MdG"/>
+                            <constraint firstItem="hmS-0J-uhM" firstAttribute="centerY" secondItem="wUT-vC-sUJ" secondAttribute="centerY" id="NZw-rl-TD6"/>
+                            <constraint firstItem="hmS-0J-uhM" firstAttribute="centerX" secondItem="wUT-vC-sUJ" secondAttribute="centerX" id="aIa-H1-FRH"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="eD5-vw-3bn" appends="YES" id="UV0-FA-6Na"/>
                         </connections>
                     </view>
-                    <connections>
-                        <outlet property="thirdScreenLabel" destination="65k-KU-7R4" id="wco-g3-Krd"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxP-BI-hoj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="1BJ-Sf-6ek" userLabel="Exit" sceneMemberID="exit"/>
@@ -53,8 +54,48 @@
             </objects>
             <point key="canvasLocation" x="129" y="151"/>
         </scene>
+        <!--TabVC-->
+        <scene sceneID="U5d-LG-7F9">
+            <objects>
+                <tableViewController storyboardIdentifier="tableVC" modalPresentationStyle="fullScreen" id="ybS-Qi-uSq" customClass="TabVC" customModule="Training_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kAc-Un-jJQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Title" id="D2T-oZ-yq5">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D2T-oZ-yq5" id="Y1A-hU-mUS">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ybS-Qi-uSq" id="xPZ-T0-fZu"/>
+                            <outlet property="delegate" destination="ybS-Qi-uSq" id="ROL-gJ-QF9"/>
+                            <outletCollection property="gestureRecognizers" destination="jdb-8l-zVC" appends="YES" id="2ky-wO-1aJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="CVy-5V-nih"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUu-HX-POU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="c6S-nf-2kj" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="jdb-8l-zVC">
+                    <connections>
+                        <segue destination="c6S-nf-2kj" kind="unwind" unwindAction="goToThirdVCWithSender:" id="v0e-Rh-pdo"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1009" y="151"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

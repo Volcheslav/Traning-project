@@ -93,15 +93,6 @@ class ViewController: UIViewController{
             present(alertTextField, animated: true)
         }
         
-        //        guard myTextField.hasText else {
-        //            return
-        //        }
-        //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        //        guard let secondViewController = storyboard.instantiateViewController(identifier: "redVC") as? MySecondViewController else { return }
-        //        secondViewController.setText(myTextField.text!)
-        //
-        //        show(secondViewController, sender: nil)
-        
     }
     
     // MARK: Alert windows
