@@ -16,7 +16,7 @@
         <!--ThirdVC-->
         <scene sceneID="a7M-3x-DLX">
             <objects>
-                <viewController id="2il-P3-XHU" customClass="ThirdVC" customModule="Training_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="thirdVC" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="2il-P3-XHU" customClass="ThirdVC" customModule="Training_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wUT-vC-sUJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,16 +30,26 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DJ8-ye-pWJ"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="65k-KU-7R4" firstAttribute="centerY" secondItem="wUT-vC-sUJ" secondAttribute="centerY" id="oYQ-ZG-pnh"/>
                             <constraint firstItem="65k-KU-7R4" firstAttribute="centerX" secondItem="wUT-vC-sUJ" secondAttribute="centerX" id="xnX-Yo-MdG"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="eD5-vw-3bn" appends="YES" id="UV0-FA-6Na"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="thirdScreenLabel" destination="65k-KU-7R4" id="wco-g3-Krd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxP-BI-hoj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="1BJ-Sf-6ek" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="left" id="eD5-vw-3bn">
+                    <connections>
+                        <segue destination="1BJ-Sf-6ek" kind="unwind" unwindAction="goHome:" id="tAP-AM-d6I"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="129" y="151"/>
         </scene>

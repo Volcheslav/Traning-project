@@ -25,6 +25,21 @@ class ViewController: UIViewController{
     
     var userDefaults = UserDefaults.standard
     
+    // MARK: View load functions
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initializeHideKeyboard()
+        myTextField.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        swipeObs()
+    }
+    
+    // MARK: Segue prepare
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tabC = segue.destination as? UITabBarController {
             if var vcFromTab = tabC.viewControllers?.first as? MySecondViewController{
@@ -38,11 +53,28 @@ class ViewController: UIViewController{
         }
     }
     
-    @IBAction func goToThirdVC(_ sender: UIButton) {
-        performSegue(withIdentifier: "toThirdVC", sender: self)
-    }
+    // MARK: Unwined segue
     
     @IBAction func goHome(_ sender: UIStoryboardSegue) {
+    }
+    
+    // MARK: Navigation
+    
+    @objc private func swipeOnLeft(gest: UISwipeGestureRecognizer) {
+        guard gest.direction == .right else {
+            return
+        }
+        let storybord = UIStoryboard(name: "ThirdScreen", bundle: nil)
+        guard let viewController = storybord.instantiateViewController(identifier: "thirdVC") as? ThirdVC else {
+            return
+        }
+        show(viewController, sender: nil)
+    }
+    
+    private func swipeObs(){
+        let goLeftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeOnLeft))
+        goLeftSwipe.direction = .right
+        self.myBackground.addGestureRecognizer(goLeftSwipe)
     }
     
     @IBAction func goToSecondVC(_ sender: UIButton) {
@@ -71,6 +103,8 @@ class ViewController: UIViewController{
         //        show(secondViewController, sender: nil)
         
     }
+    
+    // MARK: Alert windows
     
     private func showAlertWindow() {
         let alert = UIAlertController(title: "Print something", message: "No numbers", preferredStyle: .alert)
@@ -113,6 +147,8 @@ class ViewController: UIViewController{
         self.present(alert2, animated: true)
     }
     
+    // MARK: Random shit
+    
     @IBAction private func doSomething(_ sender: Any) {
         self.myErrorLabel.isHidden = myTextField.hasText
         //print("tap")
@@ -125,6 +161,8 @@ class ViewController: UIViewController{
         self.myTextField.text = nil
     }
     
+    // MARK: Hiding keybord functions
+    
     private func initializeHideKeyboard(){
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
@@ -136,11 +174,9 @@ class ViewController: UIViewController{
         view.endEditing(true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        initializeHideKeyboard()
-        myTextField.delegate = self
-    }
+ 
+    
+
 
 }
 

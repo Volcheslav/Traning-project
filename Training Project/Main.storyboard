@@ -96,17 +96,6 @@
                                     <action selector="goToSecondVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p1c-IP-H4x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="853-Yd-cc3">
-                                <rect key="frame" x="67" y="683" width="40" height="59"/>
-                                <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="40"/>
-                                <state key="normal" title="&lt;-">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToThirdVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jv2-0b-gj4"/>
-                                    <segue destination="At7-WJ-Mck" kind="show" identifier="toThirdVC" id="1s5-49-nUS"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -116,7 +105,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8R9-W2-kgo" secondAttribute="trailing" id="4Q3-es-th2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KH2-Jn-Ryp" secondAttribute="bottom" constant="15" id="6Ui-CA-qXj"/>
                             <constraint firstItem="nnX-fB-4Ia" firstAttribute="top" secondItem="x1d-Vb-VSN" secondAttribute="bottom" constant="25" id="GLy-nL-FYy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="853-Yd-cc3" secondAttribute="bottom" constant="120" id="HAu-cl-XwI"/>
                             <constraint firstItem="x1d-Vb-VSN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HH3-Mg-c70"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nnX-fB-4Ia" secondAttribute="trailing" constant="15" id="HcW-ba-0De"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nnX-fB-4Ia" secondAttribute="trailing" id="IBM-Nb-hU9"/>
@@ -125,7 +113,6 @@
                             <constraint firstItem="nnX-fB-4Ia" firstAttribute="top" secondItem="Fz0-8d-i1x" secondAttribute="bottom" constant="75" id="QLs-ts-Cyo"/>
                             <constraint firstItem="3C2-Y2-Mfy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T38-lY-hLe"/>
                             <constraint firstItem="nnX-fB-4Ia" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="TRI-7Y-hN4"/>
-                            <constraint firstItem="853-Yd-cc3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-120" id="VgN-az-671"/>
                             <constraint firstItem="nnX-fB-4Ia" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aF7-qs-LHq"/>
                             <constraint firstItem="3rz-p7-RcP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="120" id="cZz-T9-3KT"/>
                             <constraint firstItem="8R9-W2-kgo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="j7c-Gz-NeO"/>
@@ -174,13 +161,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pez-cV-I46">
-                                <rect key="frame" x="10" y="412" width="394" height="72"/>
+                                <rect key="frame" x="10" y="413" width="394" height="70"/>
                                 <fontDescription key="fontDescription" name="StayALiveAlt1-Regular" family="Stay ALive Alt1" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFG-de-hsN">
-                                <rect key="frame" x="137.5" y="250" width="139" height="62"/>
+                                <rect key="frame" x="123" y="242" width="168" height="71"/>
                                 <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="50"/>
                                 <state key="normal" title="Next -&gt;">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -190,7 +177,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nv7-5b-AEs">
-                                <rect key="frame" x="130.5" y="736" width="153" height="47"/>
+                                <rect key="frame" x="91.5" y="730" width="231" height="53"/>
                                 <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="35"/>
                                 <state key="normal" title="to main screen">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
