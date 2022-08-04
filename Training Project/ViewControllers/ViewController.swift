@@ -74,13 +74,13 @@ class ViewController: UIViewController{
     
     private func showAlertWindow() {
         let alert = UIAlertController(title: "Print something", message: "No numbers", preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        //let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         let okAction = UIAlertAction(title: "OK", style: .default) { [unowned self] _ in
             if let hasText = alert.textFields?.first?.hasText {
                 switch hasText {
                 case true:
                     let numChexk = alert.textFields!.first!.text!
-                    let nums = numChexk.map({"1234567890".contains($0)}).contains(true)
+                    let nums = numChexk.hasNumbers()
                     if nums {
                         self.showAlertIfNumbers()
                     } else {
@@ -93,7 +93,7 @@ class ViewController: UIViewController{
             }
         }
         alert.addAction(okAction)
-        alert.addAction(cancelAction)
+        alert.addCancelAction()
         alert.addTextField(configurationHandler: {$0.placeholder = "enter something"})
         present(alert, animated: true)
         
@@ -102,12 +102,14 @@ class ViewController: UIViewController{
     private func showAlertIfNumbers() {
         let alert3 = UIAlertController(title: "Alert!", message: "No numbers!", preferredStyle: .alert)
         alert3.addAction(UIAlertAction(title: "Again", style: .default){[unowned self] _ in self.showAlertWindow()})
+        alert3.addCancelAction()
         self.present(alert3, animated: true, completion: nil)
     }
     
     private func showAlertText(){
         let alert2 = UIAlertController(title: "Alert!", message: "You must type a text", preferredStyle: .alert)
         alert2.addAction(UIAlertAction(title: "Ok", style: .default){[unowned self] _ in self.showAlertWindow()})
+        alert2.addCancelAction()
         self.present(alert2, animated: true)
     }
     
@@ -139,10 +141,25 @@ class ViewController: UIViewController{
         initializeHideKeyboard()
         myTextField.delegate = self
     }
-    
-    
-    
-    
+
+}
+
+
+extension String {
+    func hasNumbers() -> Bool {
+        guard !self.isEmpty else {
+            return true
+        }
+        let hasNums = self.map{$0.isNumber}
+        return hasNums.contains(true) ? true : false
+    }
+}
+
+extension UIAlertController {
+    func addCancelAction () {
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        self.addAction(cancelAction)
+    }
 }
 
 extension ViewController: UITextFieldDelegate {

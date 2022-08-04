@@ -174,13 +174,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pez-cV-I46">
-                                <rect key="frame" x="10" y="413" width="394" height="70"/>
+                                <rect key="frame" x="10" y="412" width="394" height="72"/>
                                 <fontDescription key="fontDescription" name="StayALiveAlt1-Regular" family="Stay ALive Alt1" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFG-de-hsN">
-                                <rect key="frame" x="123" y="242" width="168" height="71"/>
+                                <rect key="frame" x="137.5" y="250" width="139" height="62"/>
                                 <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="50"/>
                                 <state key="normal" title="Next -&gt;">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -190,7 +190,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nv7-5b-AEs">
-                                <rect key="frame" x="91.5" y="730" width="231" height="53"/>
+                                <rect key="frame" x="130.5" y="736" width="153" height="47"/>
                                 <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="35"/>
                                 <state key="normal" title="to main screen">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -208,7 +208,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Voz-RR-DHU"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
                             <constraint firstItem="Pez-cV-I46" firstAttribute="centerY" secondItem="YWt-9E-MAI" secondAttribute="centerY" id="5oJ-OB-3N7"/>
                             <constraint firstAttribute="trailing" secondItem="Pez-cV-I46" secondAttribute="trailing" constant="10" id="LqJ-XP-nVZ"/>
@@ -266,7 +266,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ngy-Q2-FHl"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" red="1" green="0.51289737534896029" blue="0.20540293360441086" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1Oy-z1-2tf" firstAttribute="centerX" secondItem="uc9-Qw-0TW" secondAttribute="centerX" id="Idh-sZ-oPY"/>
                             <constraint firstItem="MqB-1V-uuS" firstAttribute="top" secondItem="MpE-Aw-TR9" secondAttribute="bottom" constant="100" id="KJY-7S-3Xm"/>
@@ -348,7 +348,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="seR-RJ-m3l"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="0.91280500856164382" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="seR-RJ-m3l" firstAttribute="trailing" secondItem="3nS-oB-iTR" secondAttribute="trailing" constant="30" id="32t-Lz-qbH"/>
                             <constraint firstItem="3nS-oB-iTR" firstAttribute="centerX" secondItem="uuj-Cu-IRP" secondAttribute="centerX" id="3ca-CN-olk"/>
@@ -412,7 +412,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcf-hX-RRb"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ROY-F5-hGr" firstAttribute="top" secondItem="xAr-RW-ONv" secondAttribute="bottom" constant="26" id="0ec-Cp-VTu"/>
                             <constraint firstItem="Bcf-hX-RRb" firstAttribute="bottom" secondItem="Nyl-Qt-kf4" secondAttribute="bottom" constant="19" id="1ex-ub-JFs"/>
@@ -465,7 +465,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bSQ-Sl-TPX"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jV7-Se-vdf" firstAttribute="leading" secondItem="bSQ-Sl-TPX" secondAttribute="leading" constant="30" id="HvA-AG-uhj"/>
                             <constraint firstItem="jV7-Se-vdf" firstAttribute="centerX" secondItem="Qee-zH-NG4" secondAttribute="centerX" id="Yoe-6L-doI"/>
@@ -528,17 +528,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
