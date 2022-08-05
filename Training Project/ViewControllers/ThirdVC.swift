@@ -17,6 +17,13 @@ class ThirdVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func goToCollection(_ sender: UIButton) {
+        let storybord = UIStoryboard(name: "Collection", bundle: nil)
+        guard let vc = storybord.instantiateViewController(identifier: "picColVC") as? PicCollection else {
+            return
+        }
+        show(vc, sender: nil)
+    }
     
     @IBAction func goToThirdVC (sender: UIStoryboardSegue) {}
     

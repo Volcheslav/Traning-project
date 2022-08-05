@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmS-0J-uhM">
-                                <rect key="frame" x="98" y="417" width="218" height="62"/>
+                                <rect key="frame" x="98" y="367" width="218" height="62"/>
                                 <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="50"/>
                                 <state key="normal" title="Go to table -&gt;">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -31,12 +31,24 @@
                                     <segue destination="ybS-Qi-uSq" kind="show" identifier="goToTable" id="Et9-fQ-uI1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovg-nb-OeB">
+                                <rect key="frame" x="60" y="467" width="294" height="62"/>
+                                <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="50"/>
+                                <state key="normal" title="&lt;-  Go to collection">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToCollection:" destination="2il-P3-XHU" eventType="touchUpInside" id="jbM-ud-Eqh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DJ8-ye-pWJ"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="hmS-0J-uhM" firstAttribute="centerY" secondItem="wUT-vC-sUJ" secondAttribute="centerY" id="NZw-rl-TD6"/>
+                            <constraint firstItem="Ovg-nb-OeB" firstAttribute="centerX" secondItem="wUT-vC-sUJ" secondAttribute="centerX" id="5AI-j8-Olg"/>
+                            <constraint firstItem="Ovg-nb-OeB" firstAttribute="centerY" secondItem="wUT-vC-sUJ" secondAttribute="centerY" constant="50" id="8tc-IO-UxQ"/>
+                            <constraint firstItem="hmS-0J-uhM" firstAttribute="centerY" secondItem="wUT-vC-sUJ" secondAttribute="centerY" constant="-50" id="NZw-rl-TD6"/>
                             <constraint firstItem="hmS-0J-uhM" firstAttribute="centerX" secondItem="wUT-vC-sUJ" secondAttribute="centerX" id="aIa-H1-FRH"/>
                         </constraints>
                         <connections>
@@ -57,7 +69,7 @@
         <!--TabVC-->
         <scene sceneID="U5d-LG-7F9">
             <objects>
-                <tableViewController storyboardIdentifier="tableVC" modalPresentationStyle="fullScreen" id="ybS-Qi-uSq" customClass="TabVC" customModule="Training_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="tableVC" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="ybS-Qi-uSq" customClass="TabVC" customModule="Training_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kAc-Un-jJQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +95,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUu-HX-POU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="c6S-nf-2kj" userLabel="Exit" sceneMemberID="exit"/>
-                <swipeGestureRecognizer direction="right" id="jdb-8l-zVC">
+                <swipeGestureRecognizer direction="left" id="jdb-8l-zVC">
                     <connections>
                         <segue destination="c6S-nf-2kj" kind="unwind" unwindAction="goToThirdVCWithSender:" id="v0e-Rh-pdo"/>
                     </connections>
