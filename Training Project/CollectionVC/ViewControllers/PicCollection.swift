@@ -49,6 +49,12 @@ class PicCollection: UICollectionViewController {
 //    }
     
     @IBAction func goBackToCollection(_ unwined: UIStoryboardSegue){}
+    
+    func showAlertInfo(text: String) {
+        let alert = UIAlertController(title: "Pic info", message: "\(text)", preferredStyle: .alert)
+        alert.addCancelAction()
+        present(alert, animated: true)
+    }
 
     // MARK: UICollectionViewDataSource
 
@@ -67,6 +73,8 @@ class PicCollection: UICollectionViewController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PicCell", for: indexPath) as? PicCell else {
             fatalError()
         }
+        
+        
        
         cell.backgroundColor = .black
         cell.imageCell.image = UIImage(named: picNameArray[indexPath.item])
@@ -74,6 +82,7 @@ class PicCollection: UICollectionViewController {
         cell.imageCell.clipsToBounds = true
         cell.imageCell.contentMode = UIView.ContentMode.scaleAspectFill
         
+        //cell.infoButton.addAction(<#T##action: UIAction##UIAction#>, for: <#T##UIControl.Event#>)
 //        let longTap = UILongPressGestureRecognizer(target: self, action: #selector(goOnLongTap))
 //        cell.imageCell.addGestureRecognizer(longTap)
         // Configure the cell

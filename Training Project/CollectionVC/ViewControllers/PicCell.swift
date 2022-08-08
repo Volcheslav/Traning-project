@@ -13,5 +13,12 @@ final class PicCell: UICollectionViewCell {
     
     @IBOutlet weak var imageLabel: UILabel!
     
+//    @IBAction func getCellInfo(_ sender: UIButton) {
+//
+//    }
+//
+//    @IBOutlet weak var infoButton: UIButton!
     
+    
+   
 }

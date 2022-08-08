@@ -42,15 +42,18 @@
                                             <gestureRecognizers/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hox-zb-fVR">
-                                            <rect key="frame" x="40.5" y="91.5" width="47.5" height="26.5"/>
+                                            <rect key="frame" x="40.5" y="92" width="47.5" height="26"/>
                                             <fontDescription key="fontDescription" name="StayALive-Regular" family="Stay ALive" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuL-nO-a6B">
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuL-nO-a6B">
                                             <rect key="frame" x="90" y="8" width="30" height="30"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="info"/>
+                                            <connections>
+                                                <action selector="getCellInfo:" destination="hV4-1g-Ggs" eventType="touchUpInside" id="XnV-TL-V7B"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -67,6 +70,7 @@
                                 <connections>
                                     <outlet property="imageCell" destination="S3D-nA-P7X" id="cdo-kO-PwF"/>
                                     <outlet property="imageLabel" destination="Hox-zb-fVR" id="u5X-Oc-HGl"/>
+                                    <outlet property="infoButton" destination="yuL-nO-a6B" id="g8R-Sb-FFU"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
