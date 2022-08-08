@@ -78,6 +78,14 @@ class ViewController: UIViewController{
         self.myBackground.addGestureRecognizer(goLeftSwipe)
     }
     
+    @IBAction func goToAnimationVC(_ sender: UIButton) {
+        let storybord = UIStoryboard(name: "Animation", bundle: nil)
+        guard let viewController = storybord.instantiateViewController(identifier: "animationVC") as? AnimationVC else {
+            return
+        }
+        show(viewController, sender: self)
+    }
+    
     @IBAction func goToSecondVC(_ sender: UIButton) {
         if myTextField.hasText {
             if UserDefaults.standard.object(forKey: "str") != nil{

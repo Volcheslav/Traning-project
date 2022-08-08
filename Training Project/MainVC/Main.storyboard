@@ -96,6 +96,16 @@
                                     <action selector="goToSecondVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p1c-IP-H4x"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iz8-Y5-gkb">
+                                <rect key="frame" x="51.5" y="605" width="311" height="71"/>
+                                <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="50"/>
+                                <state key="normal" title="To animation!!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToAnimationVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iG2-31-Zpo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -115,8 +125,10 @@
                             <constraint firstItem="nnX-fB-4Ia" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="TRI-7Y-hN4"/>
                             <constraint firstItem="nnX-fB-4Ia" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aF7-qs-LHq"/>
                             <constraint firstItem="3rz-p7-RcP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="120" id="cZz-T9-3KT"/>
+                            <constraint firstItem="KH2-Jn-Ryp" firstAttribute="top" secondItem="Iz8-Y5-gkb" secondAttribute="bottom" constant="100" id="f9y-X7-VUr"/>
                             <constraint firstItem="8R9-W2-kgo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="j7c-Gz-NeO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3rz-p7-RcP" secondAttribute="bottom" constant="120" id="lGC-vG-Aj5"/>
+                            <constraint firstItem="Iz8-Y5-gkb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pkl-Af-FtA"/>
                             <constraint firstItem="nnX-fB-4Ia" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uMS-ts-euo"/>
                             <constraint firstItem="Fz0-8d-i1x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="whK-F7-Y37"/>
                             <constraint firstItem="8R9-W2-kgo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xKW-l8-ZUC"/>

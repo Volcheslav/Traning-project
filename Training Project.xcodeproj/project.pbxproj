@@ -36,6 +36,8 @@
 		5343CF25289C07CF00B13387 /* spacex.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF24289C07CF00B13387 /* spacex.jpg */; };
 		5343CF28289C07D500B13387 /* mars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF27289C07D500B13387 /* mars.jpg */; };
 		5343CF2B289C0EC700B13387 /* TabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5343CF2A289C0EC700B13387 /* TabVC.swift */; };
+		53770C0428A138750019BFCF /* Animation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53770C0328A138750019BFCF /* Animation.storyboard */; };
+		53770C0B28A138B50019BFCF /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53770C0A28A138B50019BFCF /* AnimationVC.swift */; };
 		539596E728980F19009D0255 /* OrangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539596E628980F19009D0255 /* OrangeVC.swift */; };
 		539596EC28980F59009D0255 /* PurpleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539596EB28980F59009D0255 /* PurpleVC.swift */; };
 		539596EF28980F92009D0255 /* BlueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539596EE28980F92009D0255 /* BlueVC.swift */; };
@@ -76,6 +78,8 @@
 		5343CF24289C07CF00B13387 /* spacex.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spacex.jpg; sourceTree = "<group>"; };
 		5343CF27289C07D500B13387 /* mars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mars.jpg; sourceTree = "<group>"; };
 		5343CF2A289C0EC700B13387 /* TabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabVC.swift; sourceTree = "<group>"; };
+		53770C0328A138750019BFCF /* Animation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Animation.storyboard; sourceTree = "<group>"; };
+		53770C0A28A138B50019BFCF /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
 		539596E628980F19009D0255 /* OrangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeVC.swift; sourceTree = "<group>"; };
 		539596EB28980F59009D0255 /* PurpleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleVC.swift; sourceTree = "<group>"; };
 		539596EE28980F92009D0255 /* BlueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueVC.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 		53403B8028901F56003AE836 /* Training Project */ = {
 			isa = PBXGroup;
 			children = (
+				53770C0128A138480019BFCF /* AnimationsVC */,
 				53376B91289A799800FB8AF2 /* Protocols */,
 				53220D2D28929E9E00CA9D06 /* Picture */,
 				53E413B92891774500953A5F /* Fonts */,
@@ -222,6 +227,23 @@
 				5343CF27289C07D500B13387 /* mars.jpg */,
 			);
 			path = "Tab pics";
+			sourceTree = "<group>";
+		};
+		53770C0128A138480019BFCF /* AnimationsVC */ = {
+			isa = PBXGroup;
+			children = (
+				53770C0228A138540019BFCF /* ViewControllers */,
+				53770C0328A138750019BFCF /* Animation.storyboard */,
+			);
+			path = AnimationsVC;
+			sourceTree = "<group>";
+		};
+		53770C0228A138540019BFCF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				53770C0A28A138B50019BFCF /* AnimationVC.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		53E413B92891774500953A5F /* Fonts */ = {
@@ -309,6 +331,7 @@
 				533AD8422897D99A00843547 /* magnifika.otf in Resources */,
 				53403B8B28901F59003AE836 /* Assets.xcassets in Resources */,
 				5343CF16289C07AE00B13387 /* the sun.jpg in Resources */,
+				53770C0428A138750019BFCF /* Animation.storyboard in Resources */,
 				533AD84C2897D9D200843547 /* Main.storyboard in Resources */,
 				53E413C2289178D600953A5F /* StayALiveAlt1.otf in Resources */,
 			);
@@ -326,6 +349,7 @@
 				5338179928A10F410014DF3F /* ViewImage.swift in Sources */,
 				539596E728980F19009D0255 /* OrangeVC.swift in Sources */,
 				533AD8792897DF0F00843547 /* ViewController.swift in Sources */,
+				53770C0B28A138B50019BFCF /* AnimationVC.swift in Sources */,
 				539596F228981070009D0255 /* GreenVC.swift in Sources */,
 				533AD8582897DA1A00843547 /* MySecondViewController.swift in Sources */,
 				5343CF2B289C0EC700B13387 /* TabVC.swift in Sources */,

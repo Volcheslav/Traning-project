@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AnimationVC-->
+        <scene sceneID="cSQ-TP-DMz">
+            <objects>
+                <viewController storyboardIdentifier="animationVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="Igh-t6-wrR" customClass="AnimationVC" customModule="Training_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5CY-T9-TE7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyStarImage" translatesAutoresizingMaskIntoConstraints="NO" id="KZM-fA-rBh">
+                                <rect key="frame" x="57" y="122" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="EP8-Yz-Gw0"/>
+                                    <constraint firstAttribute="width" constant="300" id="sRr-qp-rNc"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.01" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9xr-Wh-QtS">
+                                <rect key="frame" x="18" y="555" width="378" height="31"/>
+                                <connections>
+                                    <action selector="heightSlider:" destination="Igh-t6-wrR" eventType="valueChanged" id="PM9-0O-m9M"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-50" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="CMe-D7-UJC">
+                                <rect key="frame" x="18" y="643" width="378" height="31"/>
+                            </slider>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" maximumValue="20" stepValue="1.1000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="fNC-Ed-yZ3">
+                                <rect key="frame" x="160" y="730" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="changeX:" destination="Igh-t6-wrR" eventType="valueChanged" id="QfO-pE-sF5"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yU-VE-VFx">
+                                <rect key="frame" x="84" y="734" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.left" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftPic:" destination="Igh-t6-wrR" eventType="touchUpInside" id="wHO-IL-byE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Td9-pF-PuS">
+                                <rect key="frame" x="324" y="734" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.right" catalog="system"/>
+                                <connections>
+                                    <action selector="rightPic:" destination="Igh-t6-wrR" eventType="touchUpInside" id="KuI-eJ-ZXj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s74-Mp-fBd">
+                                <rect key="frame" x="199" y="806" width="17" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.down" catalog="system"/>
+                                <connections>
+                                    <action selector="dowPIC:" destination="Igh-t6-wrR" eventType="touchUpInside" id="lcO-zJ-P7d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hML-nG-Bcs">
+                                <rect key="frame" x="200" y="685" width="17" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.up" catalog="system"/>
+                                <connections>
+                                    <action selector="upPic:" destination="Igh-t6-wrR" eventType="touchUpInside" id="PMB-XN-2Pt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s3C-kL-RkO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="s3C-kL-RkO" firstAttribute="bottom" secondItem="CMe-D7-UJC" secondAttribute="bottom" constant="189" id="6y5-sS-vnE"/>
+                            <constraint firstItem="CMe-D7-UJC" firstAttribute="top" secondItem="9xr-Wh-QtS" secondAttribute="bottom" constant="58" id="7I8-ls-tqz"/>
+                            <constraint firstItem="9xr-Wh-QtS" firstAttribute="centerX" secondItem="5CY-T9-TE7" secondAttribute="centerX" id="BcV-sZ-FdR"/>
+                            <constraint firstItem="KZM-fA-rBh" firstAttribute="leading" secondItem="s3C-kL-RkO" secondAttribute="leading" constant="57" id="MbC-hX-qVX"/>
+                            <constraint firstItem="CMe-D7-UJC" firstAttribute="centerX" secondItem="5CY-T9-TE7" secondAttribute="centerX" id="Ycc-BL-UE2"/>
+                            <constraint firstItem="s3C-kL-RkO" firstAttribute="trailing" secondItem="KZM-fA-rBh" secondAttribute="trailing" constant="57" id="iAf-E0-Qkg"/>
+                            <constraint firstItem="9xr-Wh-QtS" firstAttribute="top" secondItem="KZM-fA-rBh" secondAttribute="bottom" constant="133" id="qil-G1-vSf"/>
+                            <constraint firstItem="9xr-Wh-QtS" firstAttribute="leading" secondItem="5CY-T9-TE7" secondAttribute="leadingMargin" id="uhD-V8-VMf"/>
+                            <constraint firstItem="9xr-Wh-QtS" firstAttribute="leading" secondItem="CMe-D7-UJC" secondAttribute="leading" id="vvy-En-kNF"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="WpA-1Q-PVv" appends="YES" id="AfY-QD-xig"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="heightSliderSlider" destination="9xr-Wh-QtS" id="mKD-Y0-FAg"/>
+                        <outlet property="image" destination="KZM-fA-rBh" id="KGA-QV-cc4"/>
+                        <outlet property="widthConstraint" destination="sRr-qp-rNc" id="c8Z-hS-57b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Len-jw-FRS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="g2C-LT-mpQ" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="down" id="WpA-1Q-PVv">
+                    <connections>
+                        <segue destination="g2C-LT-mpQ" kind="unwind" unwindAction="goHome:" id="wSE-Ws-pMh"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="311.59420289855075" y="148.66071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MyStarImage" width="512" height="512"/>
+        <image name="arrow.down" catalog="system" width="120" height="128"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="arrow.up" catalog="system" width="120" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
