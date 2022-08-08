@@ -11,6 +11,7 @@ final class PicCell: UICollectionViewCell {
     
     @IBOutlet weak var imageCell: UIImageView! 
     
-   
+    @IBOutlet weak var imageLabel: UILabel!
+    
     
 }

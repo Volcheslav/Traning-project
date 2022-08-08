@@ -37,6 +37,18 @@ class PicCollection: UICollectionViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+//    @objc func goOnLongTap(gest: UILongPressGestureRecognizer){
+//        let storybord = UIStoryboard(name: "Collection", bundle: nil)
+//        guard let viewController = storybord.instantiateViewController(identifier: "imgFromCollVC") as? ViewImage else {
+//            return
+//        }
+//        print("show")
+//        show(viewController, sender: nil)
+//
+//    }
+    
+    @IBAction func goBackToCollection(_ unwined: UIStoryboardSegue){}
 
     // MARK: UICollectionViewDataSource
 
@@ -55,15 +67,36 @@ class PicCollection: UICollectionViewController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PicCell", for: indexPath) as? PicCell else {
             fatalError()
         }
+       
         cell.backgroundColor = .black
         cell.imageCell.image = UIImage(named: picNameArray[indexPath.item])
+        cell.imageLabel.text = picNameArray[indexPath.item].capitalized
         cell.imageCell.clipsToBounds = true
         cell.imageCell.contentMode = UIView.ContentMode.scaleAspectFill
+        
+//        let longTap = UILongPressGestureRecognizer(target: self, action: #selector(goOnLongTap))
+//        cell.imageCell.addGestureRecognizer(longTap)
         // Configure the cell
     
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storybord = UIStoryboard(name: "Collection", bundle: nil)
+        guard let viewController = storybord.instantiateViewController(identifier: "imgFromCollVC") as? ViewImage else {
+            return
+        }
+        guard let cell = self.collectionView(collectionView, cellForItemAt: indexPath) as? PicCell else {
+            return
+        }
+        
+        guard let cellImage = cell.imageCell.image else {
+            return
+        }
+        //print("show")
+        viewController.setImage(cellImage)
+        show(viewController, sender: nil)
+    }
   
 
     // MARK: UICollectionViewDelegate

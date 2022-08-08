@@ -68,6 +68,7 @@ class ViewController: UIViewController{
         guard let viewController = storybord.instantiateViewController(identifier: "thirdVC") as? ThirdVC else {
             return
         }
+        
         show(viewController, sender: nil)
     }
     

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		53376B8E289A756A00FB8AF2 /* LabelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53376B8D289A756A00FB8AF2 /* LabelProtocol.swift */; };
 		53376B94289A7A2600FB8AF2 /* BarsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53376B93289A7A2600FB8AF2 /* BarsProtocol.swift */; };
+		5338179928A10F410014DF3F /* ViewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5338179828A10F410014DF3F /* ViewImage.swift */; };
 		533AD8422897D99A00843547 /* magnifika.otf in Resources */ = {isa = PBXBuildFile; fileRef = 533AD8412897D99A00843547 /* magnifika.otf */; };
 		533AD8482897D9B100843547 /* StayALive.otf in Resources */ = {isa = PBXBuildFile; fileRef = 533AD8462897D9B100843547 /* StayALive.otf */; };
 		533AD84C2897D9D200843547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533AD84B2897D9D200843547 /* Main.storyboard */; };
@@ -35,7 +36,6 @@
 		5343CF25289C07CF00B13387 /* spacex.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF24289C07CF00B13387 /* spacex.jpg */; };
 		5343CF28289C07D500B13387 /* mars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF27289C07D500B13387 /* mars.jpg */; };
 		5343CF2B289C0EC700B13387 /* TabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5343CF2A289C0EC700B13387 /* TabVC.swift */; };
-		539596E12898017B009D0255 /* TabBarStorybord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539596E02898017B009D0255 /* TabBarStorybord.storyboard */; };
 		539596E728980F19009D0255 /* OrangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539596E628980F19009D0255 /* OrangeVC.swift */; };
 		539596EC28980F59009D0255 /* PurpleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539596EB28980F59009D0255 /* PurpleVC.swift */; };
 		539596EF28980F92009D0255 /* BlueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539596EE28980F92009D0255 /* BlueVC.swift */; };
@@ -47,6 +47,7 @@
 /* Begin PBXFileReference section */
 		53376B8D289A756A00FB8AF2 /* LabelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelProtocol.swift; sourceTree = "<group>"; };
 		53376B93289A7A2600FB8AF2 /* BarsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarsProtocol.swift; sourceTree = "<group>"; };
+		5338179828A10F410014DF3F /* ViewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewImage.swift; sourceTree = "<group>"; };
 		533AD8412897D99A00843547 /* magnifika.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = magnifika.otf; sourceTree = "<group>"; };
 		533AD8462897D9B100843547 /* StayALive.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StayALive.otf; sourceTree = "<group>"; };
 		533AD84B2897D9D200843547 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		5343CF24289C07CF00B13387 /* spacex.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spacex.jpg; sourceTree = "<group>"; };
 		5343CF27289C07D500B13387 /* mars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mars.jpg; sourceTree = "<group>"; };
 		5343CF2A289C0EC700B13387 /* TabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabVC.swift; sourceTree = "<group>"; };
-		539596E02898017B009D0255 /* TabBarStorybord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarStorybord.storyboard; sourceTree = "<group>"; };
 		539596E628980F19009D0255 /* OrangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeVC.swift; sourceTree = "<group>"; };
 		539596EB28980F59009D0255 /* PurpleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleVC.swift; sourceTree = "<group>"; };
 		539596EE28980F92009D0255 /* BlueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueVC.swift; sourceTree = "<group>"; };
@@ -113,19 +113,61 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
-		53376B92289A79B600FB8AF2 /* ViewControllers */ = {
+		5338179B28A11BBC0014DF3F /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
-				539596EE28980F92009D0255 /* BlueVC.swift */,
-				539596F128981070009D0255 /* GreenVC.swift */,
-				533AD8572897DA1900843547 /* MySecondViewController.swift */,
-				539596E628980F19009D0255 /* OrangeVC.swift */,
-				539596EB28980F59009D0255 /* PurpleVC.swift */,
-				533AD8602897DA4100843547 /* ThirdVC.swift */,
+				5338179C28A11BE90014DF3F /* ViewControllers */,
+				533AD84B2897D9D200843547 /* Main.storyboard */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		5338179C28A11BE90014DF3F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				533AD8782897DF0E00843547 /* ViewController.swift */,
+				533AD8572897DA1900843547 /* MySecondViewController.swift */,
+				539596EB28980F59009D0255 /* PurpleVC.swift */,
+				539596E628980F19009D0255 /* OrangeVC.swift */,
+				539596F128981070009D0255 /* GreenVC.swift */,
+				539596EE28980F92009D0255 /* BlueVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5338179E28A11C390014DF3F /* ThirdScreenVC */ = {
+			isa = PBXGroup;
+			children = (
+				5338179F28A11C4C0014DF3F /* ViewControllers */,
+				533AD8662897DA5900843547 /* ThirdScreen.storyboard */,
+			);
+			path = ThirdScreenVC;
+			sourceTree = "<group>";
+		};
+		5338179F28A11C4C0014DF3F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				533AD8602897DA4100843547 /* ThirdVC.swift */,
 				5343CF2A289C0EC700B13387 /* TabVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		533817A128A11C7B0014DF3F /* CollectionVC */ = {
+			isa = PBXGroup;
+			children = (
+				533817A228A11C910014DF3F /* ViewControllers */,
+				533D40B5289D1B1E00DC92A5 /* Collection.storyboard */,
+			);
+			path = CollectionVC;
+			sourceTree = "<group>";
+		};
+		533817A228A11C910014DF3F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				533D40B8289D1C2300DC92A5 /* PicCollection.swift */,
 				533D40BB289D1E2500DC92A5 /* PicCell.swift */,
+				5338179828A10F410014DF3F /* ViewImage.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -149,19 +191,17 @@
 		53403B8028901F56003AE836 /* Training Project */ = {
 			isa = PBXGroup;
 			children = (
+				53376B91289A799800FB8AF2 /* Protocols */,
+				53220D2D28929E9E00CA9D06 /* Picture */,
+				53E413B92891774500953A5F /* Fonts */,
+				533817A128A11C7B0014DF3F /* CollectionVC */,
+				5338179E28A11C390014DF3F /* ThirdScreenVC */,
+				5338179B28A11BBC0014DF3F /* MainVC */,
 				53403B8F28901F59003AE836 /* Info.plist */,
 				533AD86F2897DAB300843547 /* LaunchScreen.storyboard */,
-				533AD84B2897D9D200843547 /* Main.storyboard */,
-				539596E02898017B009D0255 /* TabBarStorybord.storyboard */,
-				533AD8662897DA5900843547 /* ThirdScreen.storyboard */,
-				533D40B5289D1B1E00DC92A5 /* Collection.storyboard */,
 				53403B8128901F56003AE836 /* AppDelegate.swift */,
 				533AD84F2897D9EE00843547 /* SceneDelegate.swift */,
 				53403B8A28901F59003AE836 /* Assets.xcassets */,
-				53E413B92891774500953A5F /* Fonts */,
-				53220D2D28929E9E00CA9D06 /* Picture */,
-				53376B91289A799800FB8AF2 /* Protocols */,
-				53376B92289A79B600FB8AF2 /* ViewControllers */,
 			);
 			path = "Training Project";
 			sourceTree = "<group>";
@@ -255,7 +295,6 @@
 				533AD8702897DAB300843547 /* LaunchScreen.storyboard in Resources */,
 				533AD8482897D9B100843547 /* StayALive.otf in Resources */,
 				533D40B6289D1B1E00DC92A5 /* Collection.storyboard in Resources */,
-				539596E12898017B009D0255 /* TabBarStorybord.storyboard in Resources */,
 				5343CF1F289C07C300B13387 /* Rocket.jpg in Resources */,
 				5343CF19289C07B500B13387 /* Earth.jpg in Resources */,
 				5343CF28289C07D500B13387 /* mars.jpg in Resources */,
@@ -284,6 +323,7 @@
 			files = (
 				53376B8E289A756A00FB8AF2 /* LabelProtocol.swift in Sources */,
 				539596EF28980F92009D0255 /* BlueVC.swift in Sources */,
+				5338179928A10F410014DF3F /* ViewImage.swift in Sources */,
 				539596E728980F19009D0255 /* OrangeVC.swift in Sources */,
 				533AD8792897DF0F00843547 /* ViewController.swift in Sources */,
 				539596F228981070009D0255 /* GreenVC.swift in Sources */,
