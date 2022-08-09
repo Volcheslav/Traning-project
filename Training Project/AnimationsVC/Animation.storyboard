@@ -23,14 +23,17 @@
                                     <constraint firstAttribute="width" constant="300" id="sRr-qp-rNc"/>
                                 </constraints>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.01" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9xr-Wh-QtS">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.01" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="9xr-Wh-QtS">
                                 <rect key="frame" x="18" y="555" width="378" height="31"/>
                                 <connections>
                                     <action selector="heightSlider:" destination="Igh-t6-wrR" eventType="valueChanged" id="PM9-0O-m9M"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-50" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="CMe-D7-UJC">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="CMe-D7-UJC">
                                 <rect key="frame" x="18" y="643" width="378" height="31"/>
+                                <connections>
+                                    <action selector="rotatePic:" destination="Igh-t6-wrR" eventType="valueChanged" id="D1V-mE-5uM"/>
+                                </connections>
                             </slider>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" maximumValue="20" stepValue="1.1000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="fNC-Ed-yZ3">
                                 <rect key="frame" x="160" y="730" width="94" height="32"/>
@@ -79,6 +82,12 @@
                                     <action selector="upPic:" destination="Igh-t6-wrR" eventType="touchUpInside" id="PMB-XN-2Pt"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.01" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="G9P-8c-g4s">
+                                <rect key="frame" x="18" y="599" width="378" height="31"/>
+                                <connections>
+                                    <action selector="changeWidth:" destination="Igh-t6-wrR" eventType="valueChanged" id="tAb-xU-4jd"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s3C-kL-RkO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -86,11 +95,15 @@
                         <constraints>
                             <constraint firstItem="s3C-kL-RkO" firstAttribute="bottom" secondItem="CMe-D7-UJC" secondAttribute="bottom" constant="189" id="6y5-sS-vnE"/>
                             <constraint firstItem="CMe-D7-UJC" firstAttribute="top" secondItem="9xr-Wh-QtS" secondAttribute="bottom" constant="58" id="7I8-ls-tqz"/>
+                            <constraint firstItem="G9P-8c-g4s" firstAttribute="leading" secondItem="s3C-kL-RkO" secondAttribute="leading" constant="20" id="9A3-O6-xvH"/>
+                            <constraint firstItem="s3C-kL-RkO" firstAttribute="trailing" secondItem="G9P-8c-g4s" secondAttribute="trailing" constant="20" id="9la-dG-3yM"/>
                             <constraint firstItem="9xr-Wh-QtS" firstAttribute="centerX" secondItem="5CY-T9-TE7" secondAttribute="centerX" id="BcV-sZ-FdR"/>
                             <constraint firstItem="KZM-fA-rBh" firstAttribute="leading" secondItem="s3C-kL-RkO" secondAttribute="leading" constant="57" id="MbC-hX-qVX"/>
+                            <constraint firstItem="G9P-8c-g4s" firstAttribute="top" secondItem="9xr-Wh-QtS" secondAttribute="bottom" constant="14" id="Wqb-Qw-dqh"/>
                             <constraint firstItem="CMe-D7-UJC" firstAttribute="centerX" secondItem="5CY-T9-TE7" secondAttribute="centerX" id="Ycc-BL-UE2"/>
-                            <constraint firstItem="s3C-kL-RkO" firstAttribute="trailing" secondItem="KZM-fA-rBh" secondAttribute="trailing" constant="57" id="iAf-E0-Qkg"/>
+                            <constraint firstItem="s3C-kL-RkO" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="KZM-fA-rBh" secondAttribute="trailing" constant="57" id="iAf-E0-Qkg"/>
                             <constraint firstItem="9xr-Wh-QtS" firstAttribute="top" secondItem="KZM-fA-rBh" secondAttribute="bottom" constant="133" id="qil-G1-vSf"/>
+                            <constraint firstItem="CMe-D7-UJC" firstAttribute="top" secondItem="G9P-8c-g4s" secondAttribute="bottom" constant="14" id="roO-H0-Eih"/>
                             <constraint firstItem="9xr-Wh-QtS" firstAttribute="leading" secondItem="5CY-T9-TE7" secondAttribute="leadingMargin" id="uhD-V8-VMf"/>
                             <constraint firstItem="9xr-Wh-QtS" firstAttribute="leading" secondItem="CMe-D7-UJC" secondAttribute="leading" id="vvy-En-kNF"/>
                         </constraints>
@@ -101,7 +114,9 @@
                     <connections>
                         <outlet property="heightSliderSlider" destination="9xr-Wh-QtS" id="mKD-Y0-FAg"/>
                         <outlet property="image" destination="KZM-fA-rBh" id="KGA-QV-cc4"/>
+                        <outlet property="rotationSlider" destination="CMe-D7-UJC" id="vIi-xV-udj"/>
                         <outlet property="widthConstraint" destination="sRr-qp-rNc" id="c8Z-hS-57b"/>
+                        <outlet property="widthSlider" destination="G9P-8c-g4s" id="VCL-VA-Oas"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Len-jw-FRS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

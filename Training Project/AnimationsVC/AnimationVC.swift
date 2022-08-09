@@ -9,24 +9,45 @@ import UIKit
 
 class AnimationVC: UIViewController {
 
+    @IBOutlet weak var rotationSlider: UISlider!
     @IBOutlet weak var heightSliderSlider: UISlider!
     @IBOutlet weak var image: UIImageView!
     
+    @IBOutlet weak var widthSlider: UISlider!
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     
     @IBAction func heightSlider(_ sender: UISlider) {
         let scale = sender.value
-        let transform = CGAffineTransform(scaleX: CGFloat(scale), y: CGFloat(scale))
+        let transform = CGAffineTransform(scaleX:1 , y: CGFloat(scale))
         //        UIView.animate(withDuration: 0.1, animations: {[unowned self] in
 //            self.image.center.x = CGFloat(sender.value)
 //        })
         
         self.image.transform = transform
+        self.image.frame.applying(transform)
+        
     }
     
+    @IBAction func changeWidth(_ sender: UISlider) {
+        UIView.animate(withDuration: 0.3, animations: {[weak self] in
+            self?.image.transform = CGAffineTransform(scaleX: CGFloat(sender.value), y: 1)
+//            self?.image.transform = (self?.image.transform.scaledBy(x: CGFloat(sender.value / 10), y: 1))!
+        })
+    }
+    
+    @IBAction func rotatePic(_ sender: UISlider) {
+        UIView.animate(withDuration: 0.3, animations: {[weak self] in
+            let transform = CGAffineTransform(rotationAngle: CGFloat(sender.value))
+            self?.image.transform = transform
+            self?.image.frame.applying(transform)
+            
+//            self?.image.transform = (self?.image.transform.rotated(by: CGFloat(sender.value / 10)))!
+        })
+    }
     
     @IBAction func upPic(_ sender: UIButton) {
         UIView.animate(withDuration: 0.1, animations: {[weak self] in
+                        
                         self?.image.center.y -= 5 })
     }
     
@@ -55,6 +76,8 @@ class AnimationVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        rotationSlider.maximumValue = Float.pi * 2
+        rotationSlider.minimumValue = -(Float.pi) * 2
         
 
         // Do any additional setup after loading the view.
