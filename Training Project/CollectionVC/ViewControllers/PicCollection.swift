@@ -10,20 +10,22 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class PicCollection: UICollectionViewController {
-    
-    private let picNameArray: [String] = ["big bang", "universe","rocks","the dark sun", "the sun", "Earth", "Moon", "Rocket", "sphinks","spacex","mars"]
+
+    private let picNameArray: [String] = ["big bang", "universe", "rocks",
+                                          "the dark sun", "the sun", "Earth",
+                                          "Moon", "Rocket", "sphinks", "spacex", "mars"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
        // let layout = UICollectionViewFlowLayout()
-        //layout.scrollDirection = .horizontal
+        // layout.scrollDirection = .horizontal
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        // self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -37,7 +39,7 @@ class PicCollection: UICollectionViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
+    // swiftlint:disable all
 //    @objc func goOnLongTap(gest: UILongPressGestureRecognizer){
 //        let storybord = UIStoryboard(name: "Collection", bundle: nil)
 //        guard let viewController = storybord.instantiateViewController(identifier: "imgFromCollVC") as? ViewImage else {
@@ -47,8 +49,8 @@ class PicCollection: UICollectionViewController {
 //        show(viewController, sender: nil)
 //
 //    }
-    
-    @IBAction func goBackToCollection(_ unwined: UIStoryboardSegue){}
+    // swiftlint:enable all
+    @IBAction func goBackToCollection(_ unwined: UIStoryboardSegue) {}
 
     // MARK: UICollectionViewDataSource
 
@@ -57,30 +59,29 @@ class PicCollection: UICollectionViewController {
         return 1
     }
 
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return picNameArray.count
     }
-
+    // swiftlint:disable all
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PicCell", for: indexPath) as? PicCell else {
             fatalError()
         }
-       
+        // swiftlint:enable all
         cell.backgroundColor = .black
         cell.imageCell.image = UIImage(named: picNameArray[indexPath.item])
         cell.imageLabel.text = picNameArray[indexPath.item].capitalized
         cell.imageCell.clipsToBounds = true
         cell.imageCell.contentMode = UIView.ContentMode.scaleAspectFill
-        
+
 //        let longTap = UILongPressGestureRecognizer(target: self, action: #selector(goOnLongTap))
 //        cell.imageCell.addGestureRecognizer(longTap)
         // Configure the cell
-    
+
         return cell
     }
-    
+
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storybord = UIStoryboard(name: "Collection", bundle: nil)
         guard let viewController = storybord.instantiateViewController(identifier: "imgFromCollVC") as? ViewImage else {
@@ -89,18 +90,17 @@ class PicCollection: UICollectionViewController {
         guard let cell = self.collectionView(collectionView, cellForItemAt: indexPath) as? PicCell else {
             return
         }
-        
+
         guard let cellImage = cell.imageCell.image else {
             return
         }
-        //print("show")
+        // print("show")
         viewController.setImage(cellImage)
         show(viewController, sender: nil)
     }
-  
 
     // MARK: UICollectionViewDelegate
-
+    // swiftlint:disable all
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
@@ -132,8 +132,8 @@ class PicCollection: UICollectionViewController {
 
 }
 
-extension PicCollection:UICollectionViewDelegateFlowLayout {
-    
+extension PicCollection: UICollectionViewDelegateFlowLayout {
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemsInRow: CGFloat = 2
         let paddings: CGFloat = (itemsInRow + 1) * 20 + 1
@@ -141,18 +141,18 @@ extension PicCollection:UICollectionViewDelegateFlowLayout {
         let itemWidth = avalibalWidth / itemsInRow
         return CGSize(width: itemWidth, height: itemWidth)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 20
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20
     }
-    
-    
+
 }
+// swiftlint:enable all

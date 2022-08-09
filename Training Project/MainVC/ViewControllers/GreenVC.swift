@@ -15,11 +15,11 @@ class GreenVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+
     @IBAction func goToRoot(_ sender: UIButton) {
         self.navigationController?.popToRootViewController(animated: true)
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         greenLabel.text = UserDefaults.standard.object(forKey: "str") as? String

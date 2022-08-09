@@ -8,18 +8,20 @@
 import UIKit
 
 class TabVC: UITableViewController {
-    
-    private let picNameArray: [String] = ["big bang", "universe","rocks","the dark sun", "the sun", "Earth", "Moon", "Rocket", "sphinks","spacex","mars"]
-    private var picAndTheirNamesArrTpls:[(String,UIImage)] {
-        let arr = picNameArray.map{($0, UIImage(named: $0) ?? UIImage(named: "bcgrng")!)}
+
+    private let picNameArray: [String] = ["big bang", "universe", "rocks",
+                                          "the dark sun", "the sun", "Earth",
+                                          "Moon", "Rocket", "sphinks", "spacex", "mars"]
+    private var picAndTheirNamesArrTpls: [(String, UIImage)] {
+        let arr = picNameArray.map {($0, UIImage(named: $0) ?? UIImage(named: "bcgrng")!)}
         return arr
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = .lightGray
-        //self.tableView.backgroundColor = .darkGray
-        //print(picAndTheirNamesArrTpls.map{$0.1})
+        // self.tableView.backgroundColor = .darkGray
+        // print(picAndTheirNamesArrTpls.map{$0.1})
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -27,8 +29,8 @@ class TabVC: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
-    private func showAlertText(textOnLabel: String){
+
+    private func showAlertText(textOnLabel: String) {
         let alert = UIAlertController(title: "Cell Info", message: textOnLabel, preferredStyle: .alert)
         alert.addCancelAction()
         self.present(alert, animated: true)
@@ -40,7 +42,7 @@ class TabVC: UITableViewController {
 //        // #warning Incomplete implementation, return the number of sections
 //        return 0
 //    }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellText = tableView.cellForRow(at: indexPath)?.textLabel?.text
        // print("touch")
@@ -52,23 +54,19 @@ class TabVC: UITableViewController {
         return picNameArray.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Title", for: indexPath)
-        //let cellImg : UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        // let cellImg : UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         cell.textLabel?.text = picAndTheirNamesArrTpls[indexPath.row].0.capitalized
         cell.textLabel?.textColor = .white
         cell.imageView?.image = picAndTheirNamesArrTpls[indexPath.row].1
-        //cell.addSubview(cellImg)
+        // cell.addSubview(cellImg)
         cell.backgroundColor = .darkGray
         cell.selectionStyle = .blue
-        
+
         return cell
     }
-    
-   
-    
-
+    // swiftlint:disable all
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -115,3 +113,4 @@ class TabVC: UITableViewController {
     */
 
 }
+// swiftlint:enable all

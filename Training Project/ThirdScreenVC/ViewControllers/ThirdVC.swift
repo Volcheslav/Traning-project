@@ -8,9 +8,8 @@
 import UIKit
 
 class ThirdVC: UIViewController {
-    
-    
-    //private var textAndImageTuples: [(String, UIImage)] = [("The big bang", UIImage(named: "big bang")!)]
+
+    // private var textAndImageTuples: [(String, UIImage)] = [("The big bang", UIImage(named: "big bang")!)]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,14 +18,14 @@ class ThirdVC: UIViewController {
     }
     @IBAction func goToCollection(_ sender: UIButton) {
         let storybord = UIStoryboard(name: "Collection", bundle: nil)
-        guard let vc = storybord.instantiateViewController(identifier: "picColVC") as? PicCollection else {
+        guard let viewController = storybord.instantiateViewController(identifier: "picColVC") as? PicCollection else {
             return
         }
-        show(vc, sender: nil)
+        show(viewController, sender: nil)
     }
-    
+
     @IBAction func goToThirdVC (sender: UIStoryboardSegue) {}
-    
+
     /*
     // MARK: - Navigation
 

@@ -8,22 +8,16 @@
 import UIKit
 
 class ViewImage: UIViewController {
-    
     private var image: UIImage?
 
     @IBOutlet weak var detailImage: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
         // Do any additional setup after loading the view.
     }
-    
     func setImage(_ img: UIImage) {
         self.image = img
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.detailImage.image = image

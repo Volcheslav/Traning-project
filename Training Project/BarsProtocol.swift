@@ -8,9 +8,9 @@
 import UIKit
 
 protocol BarState {
-    
+
     func changeTabBarState(_ isHidden: Bool)
-    
+
 }
 
 protocol NavbarAndTabBar: BarState {
