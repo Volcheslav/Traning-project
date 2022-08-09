@@ -18,7 +18,7 @@ class AnimationVC: UIViewController {
     
     @IBAction func heightSlider(_ sender: UISlider) {
         let scale = sender.value
-        let transform = CGAffineTransform(scaleX:1 , y: CGFloat(scale))
+        let transform = CGAffineTransform(scaleX:CGFloat(self.widthSlider.value) , y: CGFloat(scale))
         //        UIView.animate(withDuration: 0.1, animations: {[unowned self] in
 //            self.image.center.x = CGFloat(sender.value)
 //        })
@@ -30,7 +30,7 @@ class AnimationVC: UIViewController {
     
     @IBAction func changeWidth(_ sender: UISlider) {
         UIView.animate(withDuration: 0.3, animations: {[weak self] in
-            self?.image.transform = CGAffineTransform(scaleX: CGFloat(sender.value), y: 1)
+            self?.image.transform = CGAffineTransform(scaleX: CGFloat(sender.value), y: CGFloat((self?.heightSliderSlider.value)!))
 //            self?.image.transform = (self?.image.transform.scaledBy(x: CGFloat(sender.value / 10), y: 1))!
         })
     }
