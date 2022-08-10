@@ -10,7 +10,7 @@ import UIKit
 class ViewImage: UIViewController {
     private var image: UIImage?
 
-    @IBOutlet weak var detailImage: UIImageView!
+    @IBOutlet private weak var detailImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

@@ -13,7 +13,7 @@ class TabVC: UITableViewController {
                                           "the dark sun", "the sun", "Earth",
                                           "Moon", "Rocket", "sphinks", "spacex", "mars"]
     private var picAndTheirNamesArrTpls: [(String, UIImage)] {
-        let arr = picNameArray.map {($0, UIImage(named: $0) ?? UIImage(named: "bcgrng")!)}
+        let arr = picNameArray.map { ($0, UIImage(named: $0) ?? UIImage(named: "bcgrng")!) }
         return arr
     }
 

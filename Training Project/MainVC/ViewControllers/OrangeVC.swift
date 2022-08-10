@@ -10,8 +10,8 @@ import UIKit
 class OrangeVC: UIViewController {
     var someLabelText: String?
 
-    @IBOutlet weak var alertTextLabel: UILabel!
-    @IBOutlet weak var orangeLabel: UILabel!
+    @IBOutlet private weak var alertTextLabel: UILabel!
+    @IBOutlet private weak var orangeLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,7 @@ class OrangeVC: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         orangeLabel.text = UserDefaults.standard.object(forKey: "str") as? String
         alertTextLabel.text = someLabelText
 

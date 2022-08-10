@@ -11,9 +11,19 @@ private let reuseIdentifier = "Cell"
 
 class PicCollection: UICollectionViewController {
 
-    private let picNameArray: [String] = ["big bang", "universe", "rocks",
-                                          "the dark sun", "the sun", "Earth",
-                                          "Moon", "Rocket", "sphinks", "spacex", "mars"]
+    private let picNameArray: [String] = [
+        "big bang",
+        "universe",
+        "rocks",
+        "the dark sun",
+        "the sun",
+        "Earth",
+        "Moon",
+        "Rocket",
+        "sphinks",
+        "spacex",
+        "mars"
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +60,7 @@ class PicCollection: UICollectionViewController {
 //
 //    }
     // swiftlint:enable all
-    @IBAction func goBackToCollection(_ unwined: UIStoryboardSegue) {}
+    @IBAction private func goBackToCollection(_ unwined: UIStoryboardSegue) {}
 
     // MARK: UICollectionViewDataSource
 

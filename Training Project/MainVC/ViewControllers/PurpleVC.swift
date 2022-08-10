@@ -10,7 +10,7 @@ import UIKit
 class PurpleVC: UIViewController {
     var someLabelText: String?
 
-    @IBOutlet weak var purpleLabel: UILabel!
+    @IBOutlet private weak var purpleLabel: UILabel!
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if var vcBlue = segue.destination as? BlueVC {

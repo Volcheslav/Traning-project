@@ -9,14 +9,14 @@ import UIKit
 
 class GreenVC: UIViewController {
 
-    @IBOutlet weak var greenLabel: UILabel!
+    @IBOutlet private weak var greenLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func goToRoot(_ sender: UIButton) {
+    @IBAction private func goToRoot(_ sender: UIButton) {
         self.navigationController?.popToRootViewController(animated: true)
     }
 

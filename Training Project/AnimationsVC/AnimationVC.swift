@@ -9,14 +9,14 @@ import UIKit
 
 class AnimationVC: UIViewController {
 
-    @IBOutlet weak var rotationSlider: UISlider!
-    @IBOutlet weak var heightSliderSlider: UISlider!
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet private weak var rotationSlider: UISlider!
+    @IBOutlet private weak var heightSliderSlider: UISlider!
+    @IBOutlet private weak var image: UIImageView!
 
-    @IBOutlet weak var widthSlider: UISlider!
-    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var widthSlider: UISlider!
+    @IBOutlet private weak var widthConstraint: NSLayoutConstraint!
 
-    @IBAction func heightSlider(_ sender: UISlider) {
+    @IBAction private func heightSlider(_ sender: UISlider) {
         let scale = sender.value
         let transform = CGAffineTransform(scaleX: CGFloat(self.widthSlider.value), y: CGFloat(scale))
         //        UIView.animate(withDuration: 0.1, animations: {[unowned self] in
@@ -28,15 +28,17 @@ class AnimationVC: UIViewController {
 
     }
 
-    @IBAction func changeWidth(_ sender: UISlider) {
+    @IBAction private func changeWidth(_ sender: UISlider) {
         UIView.animate(withDuration: 0.3, animations: {[weak self] in
-            self?.image.transform = CGAffineTransform(scaleX: CGFloat(sender.value),
-                                                      y: CGFloat((self?.heightSliderSlider.value)!))
+            self?.image.transform = CGAffineTransform(
+                scaleX: CGFloat(sender.value),
+                y: CGFloat((self?.heightSliderSlider.value)!)
+            )
 //            self?.image.transform = (self?.image.transform.scaledBy(x: CGFloat(sender.value / 10), y: 1))!
         })
     }
 
-    @IBAction func rotatePic(_ sender: UISlider) {
+    @IBAction private func rotatePic(_ sender: UISlider) {
         UIView.animate(withDuration: 0.3, animations: {[weak self] in
             let transform = CGAffineTransform(rotationAngle: CGFloat(sender.value))
             self?.image.transform = transform
@@ -46,28 +48,28 @@ class AnimationVC: UIViewController {
         })
     }
 
-    @IBAction func upPic(_ sender: UIButton) {
+    @IBAction private func upPic(_ sender: UIButton) {
         UIView.animate(withDuration: 0.1, animations: {[weak self] in
 
                         self?.image.center.y -= 5 })
     }
 
-    @IBAction func dowPIC(_ sender: UIButton) {
+    @IBAction private func dowPIC(_ sender: UIButton) {
         UIView.animate(withDuration: 0.1, animations: {[weak self] in
                         self?.image.center.y += 5 })
     }
 
-    @IBAction func leftPic(_ sender: UIButton) {
+    @IBAction private func leftPic(_ sender: UIButton) {
         UIView.animate(withDuration: 0.1, animations: {[weak self] in
                         self?.image.center.x -= 5 })
     }
 
-    @IBAction func rightPic(_ sender: UIButton) {
+    @IBAction private func rightPic(_ sender: UIButton) {
         UIView.animate(withDuration: 0.1, animations: {[weak self] in
                         self?.image.center.x += 5 })
     }
 
-    @IBAction func changeX(_ sender: UIStepper) {
+    @IBAction private func changeX(_ sender: UIStepper) {
         UIView.animate(withDuration: 0.1, animations: {[weak self] in
             self?.image.transform = CGAffineTransform(scaleX: CGFloat(sender.value / 10), y: CGFloat(sender.value / 10))
         })

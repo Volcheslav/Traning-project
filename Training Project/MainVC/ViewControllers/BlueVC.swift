@@ -10,10 +10,10 @@ import UIKit
 class BlueVC: UIViewController {
     internal var someLabelText: String?
 
-    @IBOutlet weak var blueLabel: UILabel!
-    @IBOutlet weak var blueLabel2: UILabel!
+    @IBOutlet private weak var blueLabel: UILabel!
+    @IBOutlet private weak var blueLabel2: UILabel!
 
-    @IBAction func goToRoot(_ sender: UIButton) {
+    @IBAction private func goToRoot(_ sender: UIButton) {
         self.navigationController?.popToRootViewController(animated: true)
     }
     override func viewDidLoad() {

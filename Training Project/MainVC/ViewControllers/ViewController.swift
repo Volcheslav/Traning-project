@@ -11,17 +11,17 @@ class ViewController: UIViewController {
 
     private var textFromAlert: String?
 
-    @IBOutlet weak private var myBackground: UIImageView!
+    @IBOutlet private weak var myBackground: UIImageView!
 
-    @IBOutlet weak private var myTitle: UILabel!
+    @IBOutlet private weak var myTitle: UILabel!
 
-    @IBOutlet weak private var myText: UILabel!
+    @IBOutlet private weak var myText: UILabel!
 
-    @IBOutlet weak private var myTextField: UITextField!
+    @IBOutlet private weak var myTextField: UITextField!
 
-    @IBOutlet weak private var myErrorLabel: UILabel!
+    @IBOutlet private weak var myErrorLabel: UILabel!
 
-    @IBOutlet weak private var myButton: UIButton!
+    @IBOutlet private weak var myButton: UIButton!
 
     var userDefaults = UserDefaults.standard
 
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
 
     // MARK: Unwined segue
 
-    @IBAction func goHome(_ sender: UIStoryboardSegue) {
+    @IBAction private func goHome(_ sender: UIStoryboardSegue) {
     }
 
     // MARK: Navigation
@@ -78,7 +78,7 @@ class ViewController: UIViewController {
         self.myBackground.addGestureRecognizer(goLeftSwipe)
     }
 
-    @IBAction func goToAnimationVC(_ sender: UIButton) {
+    @IBAction private func goToAnimationVC(_ sender: UIButton) {
         let storybord = UIStoryboard(name: "Animation", bundle: nil)
         guard let viewController = storybord.instantiateViewController(identifier: "animationVC") as? AnimationVC else {
             return
@@ -86,7 +86,7 @@ class ViewController: UIViewController {
         show(viewController, sender: self)
     }
 
-    @IBAction func goToSecondVC(_ sender: UIButton) {
+    @IBAction private func goToSecondVC(_ sender: UIButton) {
         if myTextField.hasText {
             if UserDefaults.standard.object(forKey: "str") != nil {
                 UserDefaults.standard.removeObject(forKey: "str")
@@ -128,21 +128,21 @@ class ViewController: UIViewController {
         }
         alert.addAction(okAction)
         alert.addCancelAction()
-        alert.addTextField(configurationHandler: {$0.placeholder = "enter something"})
+        alert.addTextField(configurationHandler: { $0.placeholder = "enter something" })
         present(alert, animated: true)
 
     }
 
     private func showAlertIfNumbers() {
         let alert3 = UIAlertController(title: "Alert!", message: "No numbers!", preferredStyle: .alert)
-        alert3.addAction(UIAlertAction(title: "Again", style: .default) {[unowned self] _ in self.showAlertWindow()})
+        alert3.addAction(UIAlertAction(title: "Again", style: .default) { [unowned self] _ in self.showAlertWindow() })
         alert3.addCancelAction()
         self.present(alert3, animated: true, completion: nil)
     }
 
     private func showAlertText() {
         let alert2 = UIAlertController(title: "Alert!", message: "You must type a text", preferredStyle: .alert)
-        alert2.addAction(UIAlertAction(title: "Ok", style: .default) {[unowned self] _ in self.showAlertWindow()})
+        alert2.addAction(UIAlertAction(title: "Ok", style: .default) { [unowned self] _ in self.showAlertWindow() })
         alert2.addCancelAction()
         self.present(alert2, animated: true)
     }
@@ -163,9 +163,10 @@ class ViewController: UIViewController {
     // MARK: Hiding keybord functions
 
     private func initializeHideKeyboard() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+        let tap = UITapGestureRecognizer(
             target: self,
-            action: #selector(dismissMyKeyboard))
+            action: #selector(dismissMyKeyboard)
+        )
         view.addGestureRecognizer(tap)
     }
 
@@ -180,7 +181,7 @@ extension String {
         guard !self.isEmpty else {
             return true
         }
-        let hasNums = self.map {$0.isNumber}
+        let hasNums = self.map { $0.isNumber }
         return hasNums.contains(true) ? true : false
     }
 }

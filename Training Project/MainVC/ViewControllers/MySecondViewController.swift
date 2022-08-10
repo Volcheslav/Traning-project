@@ -10,8 +10,8 @@ import UIKit
 class MySecondViewController: UIViewController {
     internal var someLabelText: String?
 
-    @IBOutlet weak var alertLabel: UILabel!
-    @IBOutlet weak var secondScreenLabel: UILabel!
+    @IBOutlet private weak var alertLabel: UILabel!
+    @IBOutlet private weak var secondScreenLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class MySecondViewController: UIViewController {
         }
     }
 
-    @IBAction func unwindToFirstScreen(_ segue: UIStoryboardSegue) {}
+    @IBAction private func unwindToFirstScreen(_ segue: UIStoryboardSegue) {}
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
