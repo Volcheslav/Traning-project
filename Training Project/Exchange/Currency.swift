@@ -8,14 +8,14 @@
 import Foundation
 
 struct Currency: Codable {
-let id: Int
-   let code: String
-   let abbreviation: String
-   let name: String
+    let id: Int
+    let code: String
+    let abbreviation: String
+    let name: String
     
     private enum CodingKeys: String, CodingKey {
-       case id = "Cur_ID"
-       case code = "Cur_Code"
+        case id = "Cur_ID"
+        case code = "Cur_Code"
         case abbreviation = "Cur_Abbreviation"
         case name = "Cur_Name"
     }

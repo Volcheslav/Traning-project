@@ -25,7 +25,6 @@ struct Exchange: Codable {
         case name = "Cur_Name"
         case rate = "Cur_OfficialRate"
         
-        
     }
     
     init() {

@@ -30,6 +30,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="4i8-7x-qKo">
+                                <rect key="frame" x="20" y="587" width="374" height="32"/>
+                                <segments>
+                                    <segment title="USD"/>
+                                    <segment title="EUR"/>
+                                    <segment title="RUB"/>
+                                    <segment title="GBP"/>
+                                </segments>
+                                <connections>
+                                    <action selector="labelChange:" destination="JRl-ln-I2t" eventType="touchUpInside" id="WBY-4e-7nf"/>
+                                    <action selector="showCurrency:" destination="JRl-ln-I2t" eventType="valueChanged" id="YpG-sK-bd7"/>
+                                    <action selector="startTouch:" destination="JRl-ln-I2t" eventType="touchDown" id="SbH-q0-CVr"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gNL-Ib-a9l"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
@@ -37,14 +51,19 @@
                         <constraints>
                             <constraint firstItem="9Cf-E0-VPG" firstAttribute="centerY" secondItem="xqb-Jl-puw" secondAttribute="centerY" id="A3n-oz-Hrg"/>
                             <constraint firstItem="9Cf-E0-VPG" firstAttribute="top" secondItem="pDn-wE-uGk" secondAttribute="bottom" constant="158" id="Bd6-f3-OGR"/>
+                            <constraint firstItem="gNL-Ib-a9l" firstAttribute="bottom" secondItem="4i8-7x-qKo" secondAttribute="bottom" constant="244" id="ChJ-T9-vMk"/>
+                            <constraint firstItem="4i8-7x-qKo" firstAttribute="leading" secondItem="gNL-Ib-a9l" secondAttribute="leading" constant="20" id="GFI-8s-g3F"/>
                             <constraint firstItem="9Cf-E0-VPG" firstAttribute="centerX" secondItem="xqb-Jl-puw" secondAttribute="centerX" id="Ws0-qT-8qu"/>
                             <constraint firstItem="pDn-wE-uGk" firstAttribute="centerX" secondItem="xqb-Jl-puw" secondAttribute="centerX" id="v5p-IC-ecq"/>
+                            <constraint firstItem="gNL-Ib-a9l" firstAttribute="trailing" secondItem="4i8-7x-qKo" secondAttribute="trailing" constant="20" id="v8o-lg-8Ro"/>
+                            <constraint firstItem="4i8-7x-qKo" firstAttribute="centerX" secondItem="xqb-Jl-puw" secondAttribute="centerX" id="zSI-aD-GUb"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="lgw-d5-IQ9" appends="YES" id="cGn-cs-jo2"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="currenciesSegmentegContr" destination="4i8-7x-qKo" id="5HA-A1-BQf"/>
                         <outlet property="exchngeLabel" destination="pDn-wE-uGk" id="puy-hJ-DFi"/>
                     </connections>
                 </viewController>
@@ -56,7 +75,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="212" y="135"/>
+            <point key="canvasLocation" x="211.59420289855075" y="134.59821428571428"/>
         </scene>
     </scenes>
     <resources>
