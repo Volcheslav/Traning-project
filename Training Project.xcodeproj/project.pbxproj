@@ -23,6 +23,10 @@
 		533D40B6289D1B1E00DC92A5 /* Collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533D40B5289D1B1E00DC92A5 /* Collection.storyboard */; };
 		533D40B9289D1C2300DC92A5 /* PicCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533D40B8289D1C2300DC92A5 /* PicCollection.swift */; };
 		533D40BC289D1E2500DC92A5 /* PicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533D40BB289D1E2500DC92A5 /* PicCell.swift */; };
+		53400DEB28A3E66B0024C6EF /* Exchange.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53400DEA28A3E66B0024C6EF /* Exchange.storyboard */; };
+		53400DEE28A3E6900024C6EF /* ExchangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53400DED28A3E6900024C6EF /* ExchangeVC.swift */; };
+		53400DF128A3E8980024C6EF /* ExchangeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53400DF028A3E8980024C6EF /* ExchangeStruct.swift */; };
+		53400DF728A3FC980024C6EF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53400DF628A3FC980024C6EF /* Currency.swift */; };
 		53403B8228901F56003AE836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53403B8128901F56003AE836 /* AppDelegate.swift */; };
 		53403B8B28901F59003AE836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53403B8A28901F59003AE836 /* Assets.xcassets */; };
 		5343CF0A289C079100B13387 /* big bang.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF09289C079100B13387 /* big bang.jpg */; };
@@ -63,6 +67,10 @@
 		533D40B5289D1B1E00DC92A5 /* Collection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Collection.storyboard; sourceTree = "<group>"; };
 		533D40B8289D1C2300DC92A5 /* PicCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicCollection.swift; sourceTree = "<group>"; };
 		533D40BB289D1E2500DC92A5 /* PicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicCell.swift; sourceTree = "<group>"; };
+		53400DEA28A3E66B0024C6EF /* Exchange.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Exchange.storyboard; sourceTree = "<group>"; };
+		53400DED28A3E6900024C6EF /* ExchangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeVC.swift; sourceTree = "<group>"; };
+		53400DF028A3E8980024C6EF /* ExchangeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeStruct.swift; sourceTree = "<group>"; };
+		53400DF628A3FC980024C6EF /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		53403B7E28901F56003AE836 /* Training Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Training Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53403B8128901F56003AE836 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53403B8A28901F59003AE836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -181,6 +189,17 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		53400DE928A3E6480024C6EF /* Exchange */ = {
+			isa = PBXGroup;
+			children = (
+				53400DEA28A3E66B0024C6EF /* Exchange.storyboard */,
+				53400DED28A3E6900024C6EF /* ExchangeVC.swift */,
+				53400DF028A3E8980024C6EF /* ExchangeStruct.swift */,
+				53400DF628A3FC980024C6EF /* Currency.swift */,
+			);
+			path = Exchange;
+			sourceTree = "<group>";
+		};
 		53403B7528901F56003AE836 = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +221,7 @@
 		53403B8028901F56003AE836 /* Training Project */ = {
 			isa = PBXGroup;
 			children = (
+				53400DE928A3E6480024C6EF /* Exchange */,
 				53770C0128A138480019BFCF /* AnimationsVC */,
 				53376B91289A799800FB8AF2 /* Protocols */,
 				53220D2D28929E9E00CA9D06 /* Picture */,
@@ -348,6 +368,7 @@
 				5343CF28289C07D500B13387 /* mars.jpg in Resources */,
 				5343CF0A289C079100B13387 /* big bang.jpg in Resources */,
 				5343CF0D289C079900B13387 /* universe.jpg in Resources */,
+				53400DEB28A3E66B0024C6EF /* Exchange.storyboard in Resources */,
 				5343CF13289C07A800B13387 /* the dark sun.jpg in Resources */,
 				5343CF25289C07CF00B13387 /* spacex.jpg in Resources */,
 				53E8A44C28929E3D0023C0EC /* bcgrng.jpg in Resources */,
@@ -412,6 +433,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53400DEE28A3E6900024C6EF /* ExchangeVC.swift in Sources */,
+				53400DF128A3E8980024C6EF /* ExchangeStruct.swift in Sources */,
 				53376B8E289A756A00FB8AF2 /* LabelProtocol.swift in Sources */,
 				539596EF28980F92009D0255 /* BlueVC.swift in Sources */,
 				5338179928A10F410014DF3F /* ViewImage.swift in Sources */,
@@ -425,6 +448,7 @@
 				533D40BC289D1E2500DC92A5 /* PicCell.swift in Sources */,
 				533AD8612897DA4100843547 /* ThirdVC.swift in Sources */,
 				53376B94289A7A2600FB8AF2 /* BarsProtocol.swift in Sources */,
+				53400DF728A3FC980024C6EF /* Currency.swift in Sources */,
 				533D40B9289D1C2300DC92A5 /* PicCollection.swift in Sources */,
 				539596EC28980F59009D0255 /* PurpleVC.swift in Sources */,
 				533AD8502897D9EE00843547 /* SceneDelegate.swift in Sources */,

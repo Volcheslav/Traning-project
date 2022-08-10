@@ -77,7 +77,7 @@ class ViewController: UIViewController {
         goLeftSwipe.direction = .right
         self.myBackground.addGestureRecognizer(goLeftSwipe)
     }
-
+// Сделать функцию для перехода
     @IBAction private func goToAnimationVC(_ sender: UIButton) {
         let storybord = UIStoryboard(name: "Animation", bundle: nil)
         guard let viewController = storybord.instantiateViewController(identifier: "animationVC") as? AnimationVC else {
@@ -86,6 +86,14 @@ class ViewController: UIViewController {
         show(viewController, sender: self)
     }
 
+    @IBAction private func goToExchangeVC(_ sender: UIButton) {
+        let storybord = UIStoryboard(name: "Exchange", bundle: nil)
+        guard let viewController = storybord.instantiateViewController(identifier: "exchangeVC") as? ExchangeVC else {
+            return
+        }
+        show(viewController, sender: self)
+    }
+    
     @IBAction private func goToSecondVC(_ sender: UIButton) {
         if myTextField.hasText {
             if UserDefaults.standard.object(forKey: "str") != nil {

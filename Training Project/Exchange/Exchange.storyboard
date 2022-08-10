@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ExchangeVC-->
+        <scene sceneID="lck-FZ-YVC">
+            <objects>
+                <viewController storyboardIdentifier="exchangeVC" modalPresentationStyle="fullScreen" id="JRl-ln-I2t" customClass="ExchangeVC" customModule="Training_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xqb-Jl-puw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cf-E0-VPG">
+                                <rect key="frame" x="176" y="418" width="62" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Get"/>
+                                <connections>
+                                    <action selector="getExchangeInfo:" destination="JRl-ln-I2t" eventType="touchUpInside" id="mYy-b5-rhk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDn-wE-uGk">
+                                <rect key="frame" x="123.5" y="200" width="167" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gNL-Ib-a9l"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="9Cf-E0-VPG" firstAttribute="centerY" secondItem="xqb-Jl-puw" secondAttribute="centerY" id="A3n-oz-Hrg"/>
+                            <constraint firstItem="9Cf-E0-VPG" firstAttribute="top" secondItem="pDn-wE-uGk" secondAttribute="bottom" constant="158" id="Bd6-f3-OGR"/>
+                            <constraint firstItem="9Cf-E0-VPG" firstAttribute="centerX" secondItem="xqb-Jl-puw" secondAttribute="centerX" id="Ws0-qT-8qu"/>
+                            <constraint firstItem="pDn-wE-uGk" firstAttribute="centerX" secondItem="xqb-Jl-puw" secondAttribute="centerX" id="v5p-IC-ecq"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="lgw-d5-IQ9" appends="YES" id="cGn-cs-jo2"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="exchngeLabel" destination="pDn-wE-uGk" id="puy-hJ-DFi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Dm-Ll-2KS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="BgM-Pa-dqy" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="down" id="lgw-d5-IQ9">
+                    <connections>
+                        <segue destination="BgM-Pa-dqy" kind="unwind" unwindAction="goHome:" id="rCK-xf-XgE"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="212" y="135"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

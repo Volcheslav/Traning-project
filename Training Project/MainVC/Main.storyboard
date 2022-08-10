@@ -106,6 +106,16 @@
                                     <action selector="goToAnimationVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iG2-31-Zpo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFs-HB-wCH">
+                                <rect key="frame" x="50.5" y="520" width="313" height="71"/>
+                                <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="50"/>
+                                <state key="normal" title="To Exchange!!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToExchangeVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7LI-Hi-NbV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,10 +124,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8R9-W2-kgo" secondAttribute="bottom" id="14Z-gS-094"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8R9-W2-kgo" secondAttribute="trailing" id="4Q3-es-th2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KH2-Jn-Ryp" secondAttribute="bottom" constant="15" id="6Ui-CA-qXj"/>
+                            <constraint firstItem="Iz8-Y5-gkb" firstAttribute="top" secondItem="ZFs-HB-wCH" secondAttribute="bottom" constant="14" id="8WT-6P-6qU"/>
                             <constraint firstItem="nnX-fB-4Ia" firstAttribute="top" secondItem="x1d-Vb-VSN" secondAttribute="bottom" constant="25" id="GLy-nL-FYy"/>
                             <constraint firstItem="x1d-Vb-VSN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HH3-Mg-c70"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nnX-fB-4Ia" secondAttribute="trailing" constant="15" id="HcW-ba-0De"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nnX-fB-4Ia" secondAttribute="trailing" id="IBM-Nb-hU9"/>
+                            <constraint firstItem="ZFs-HB-wCH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jhe-fy-uUD"/>
                             <constraint firstItem="Fz0-8d-i1x" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="KyH-WH-GvR"/>
                             <constraint firstItem="3C2-Y2-Mfy" firstAttribute="top" secondItem="nnX-fB-4Ia" secondAttribute="bottom" constant="20" id="ODe-bv-3cw"/>
                             <constraint firstItem="nnX-fB-4Ia" firstAttribute="top" secondItem="Fz0-8d-i1x" secondAttribute="bottom" constant="75" id="QLs-ts-Cyo"/>
