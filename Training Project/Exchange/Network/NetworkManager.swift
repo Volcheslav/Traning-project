@@ -14,7 +14,7 @@ class NetworkManager {
         urlComponents.queryItems = [URLQueryItem(name: APIConst.mode, value: "2")]
         guard let url = urlComponents.url else { return }
         let session = URLSession(configuration: .default)
-        let task = session.dataTask(with: url, completionHandler: {data, response, error in
+        let task = session.dataTask(with: url, completionHandler: {data, _, error in
             guard let data = data, error == nil else {
                 print("Error")
                 return
@@ -30,7 +30,6 @@ class NetworkManager {
             
             print(String(data: data, encoding: .utf8) ?? "no data")
             
-            
         })
         task.resume()
     }
@@ -40,7 +39,7 @@ class NetworkManager {
        urlComponents.queryItems = [URLQueryItem(name: APIConst.mode, value: "2")]
        guard let url = urlComponents.url else { return }
        let session = URLSession(configuration: .default)
-       let task = session.dataTask(with: url, completionHandler: {data, response, error in
+       let task = session.dataTask(with: url, completionHandler: {data, _, error in
            guard let data = data, error == nil else {
                print("Error")
                return
@@ -55,7 +54,6 @@ class NetworkManager {
            }
            
            print(String(data: data, encoding: .utf8) ?? "no data")
-           
            
        })
        task.resume()

@@ -4,12 +4,18 @@
 //
 //  Created by VironIT on 7/26/22.
 //
-
+import KeychainSwift
 import UIKit
 
 class ViewController: UIViewController {
 
     private var textFromAlert: String?
+    
+    private var userDefaults = UserDefaults.standard
+    
+    private var keyChain = KeychainSwift()
+    
+    private var username: String?
 
     @IBOutlet private weak var myBackground: UIImageView!
 
@@ -23,18 +29,18 @@ class ViewController: UIViewController {
 
     @IBOutlet private weak var myButton: UIButton!
 
-    var userDefaults = UserDefaults.standard
-
     // MARK: View load functions
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeHideKeyboard()
+        myTextField.placeholder = "Enter your username"
         myTextField.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.myTextField.text = nil
         swipeObs()
     }
 
@@ -96,64 +102,110 @@ class ViewController: UIViewController {
     
     @IBAction private func goToSecondVC(_ sender: UIButton) {
         if myTextField.hasText {
-            if UserDefaults.standard.object(forKey: "str") != nil {
-                UserDefaults.standard.removeObject(forKey: "str")
-            }
-            userDefaults.set(myTextField.text, forKey: "str")
-            showAlertWindow()
-            // performSegue(withIdentifier: "toSecondVC", sender: self)
+            self.username = myTextField.text!.trimmingCharacters(in: .whitespaces).lowercased()
+
+            setUsernameInDefalts(username: self.username!)
 
         } else {
-            let alertTextField = UIAlertController(title: "Error", message: "Type some text!", preferredStyle: .alert)
-            let okButton = UIAlertAction(title: "OK", style: .default)
-            alertTextField.addAction(okButton)
-            present(alertTextField, animated: true)
+            showAlertText(window: {}, message: "Type your username!")
         }
 
+    }
+    
+    private func setUsernameInDefalts(username: String) {
+        if UserDefaults.standard.object(forKey: username) != nil {
+            showGetPasswordAlert()
+        } else {
+        userDefaults.set(username, forKey: username)
+            showSetPasswordAlert()
+        }
     }
 
     // MARK: Alert windows
-
-    private func showAlertWindow() {
-        let alert = UIAlertController(title: "Print something", message: "No numbers", preferredStyle: .alert)
-        // let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        let okAction = UIAlertAction(title: "OK", style: .default) { [unowned self] _ in
+    
+    private func showSetPasswordAlert() {
+        let alert = UIAlertController(title: "Password", message: "Set your password, new user", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: { $0.placeholder = "Enter your new password" })
+        alert.addCancelAction()
+        let okAction = UIAlertAction(title: "OK", style: .default) {[unowned self] _ in
             if let hasText = alert.textFields?.first?.hasText {
                 switch hasText {
                 case true:
-                    let numChexk = alert.textFields!.first!.text!
-                    let nums = numChexk.hasNumbers()
-                    if nums {
-                        self.showAlertIfNumbers()
-                    } else {
-                        self.textFromAlert = numChexk
-                        self.performSegue(withIdentifier: "toSecondVC", sender: nil)}
+                    keyChain.set(alert.textFields!.first!.text!, forKey: self.username!)
+                    showAlertText(window: showGetPasswordAlert, message: "Succes!!")
                 default:
-                    self.showAlertText()
+                    showAlertText(window: showSetPasswordAlert, message: "Type your password!")
                 }
-
             }
         }
         alert.addAction(okAction)
-        alert.addCancelAction()
-        alert.addTextField(configurationHandler: { $0.placeholder = "enter something" })
         present(alert, animated: true)
-
     }
-
-    private func showAlertIfNumbers() {
-        let alert3 = UIAlertController(title: "Alert!", message: "No numbers!", preferredStyle: .alert)
-        alert3.addAction(UIAlertAction(title: "Again", style: .default) { [unowned self] _ in self.showAlertWindow() })
-        alert3.addCancelAction()
-        self.present(alert3, animated: true, completion: nil)
+    
+    private func showGetPasswordAlert() {
+        let alert = UIAlertController(title: "Password", message: "Enter your password", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: { $0.placeholder = "Enter your password" })
+        alert.addCancelAction()
+        let okAction = UIAlertAction(title: "OK", style: .default) {[unowned self] _ in
+            if let hasText = alert.textFields?.first?.hasText {
+                switch hasText {
+                case true:
+                    let passwordInMemory = keyChain.get(self.username!)
+                    let passwordEntered = alert.textFields!.first!.text!
+                    if passwordInMemory == passwordEntered {
+                        self.performSegue(withIdentifier: "toSecondVC", sender: nil)
+                    } else {
+                        showAlertText(window: showGetPasswordAlert, message: "Incorrect password!")
+                    }
+                default:
+                    showAlertText(window: showGetPasswordAlert, message: "Type your password!")
+                }
+            }
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
-
-    private func showAlertText() {
-        let alert2 = UIAlertController(title: "Alert!", message: "You must type a text", preferredStyle: .alert)
-        alert2.addAction(UIAlertAction(title: "Ok", style: .default) { [unowned self] _ in self.showAlertWindow() })
+    
+    private func showAlertText(window: @escaping () -> Void, message: String) {
+        let alert2 = UIAlertController(title: "Alert!", message: message, preferredStyle: .alert)
+        alert2.addAction(UIAlertAction(title: "Ok", style: .default) { _ in window() })
         alert2.addCancelAction()
         self.present(alert2, animated: true)
     }
+
+//    private func showAlertWindow() {
+//        let alert = UIAlertController(title: "Print something", message: "No numbers", preferredStyle: .alert)
+//        // let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+//        let okAction = UIAlertAction(title: "OK", style: .default) { [unowned self] _ in
+//            if let hasText = alert.textFields?.first?.hasText {
+//                switch hasText {
+//                case true:
+//                    let numChexk = alert.textFields!.first!.text!
+//                    let nums = numChexk.hasNumbers()
+//                    if nums {
+//                        self.showAlertIfNumbers()
+//                    } else {
+//                        self.textFromAlert = numChexk
+//                        self.performSegue(withIdentifier: "toSecondVC", sender: nil)}
+//                default:
+//                    self.showAlertText(window: showAlertWindow, message: "Type a text!")
+//                }
+//
+//            }
+//        }
+//        alert.addAction(okAction)
+//        alert.addCancelAction()
+//        alert.addTextField(configurationHandler: { $0.placeholder = "enter something" })
+//        present(alert, animated: true)
+//
+//    }
+
+//    private func showAlertIfNumbers() {
+//        let alert3 = UIAlertController(title: "Alert!", message: "No numbers!", preferredStyle: .alert)
+//        alert3.addAction(UIAlertAction(title: "Again", style: .default) { [unowned self] _ in self.showAlertWindow() })
+//        alert3.addCancelAction()
+//        self.present(alert3, animated: true, completion: nil)
+//    }
 
     // MARK: Random shit
 

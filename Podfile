@@ -7,4 +7,5 @@ target 'Training Project' do
 
   # Pods for Training Project
   pod 'SwiftLint', '0.48.0'
+  pod 'KeychainSwift', '20.0.0'
 end
