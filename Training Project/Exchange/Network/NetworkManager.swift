@@ -20,13 +20,13 @@ class NetworkManager {
                 return
             }
             
-            var result: Exchange?
-            
-            do {
-                try result = JSONDecoder().decode(Exchange.self, from: data)
-            } catch {
-                print("error")
-            }
+//            var result: Exchange?
+//            
+//            do {
+//                try result = JSONDecoder().decode(Exchange.self, from: data)
+//            } catch {
+//                print("error")
+//            }
             
             print(String(data: data, encoding: .utf8) ?? "no data")
             

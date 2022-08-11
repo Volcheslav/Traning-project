@@ -112,6 +112,17 @@ class ViewController: UIViewController {
 
     }
     
+//    private func goTo2VCAfterPassCheck() {
+//        if myTextField.hasText {
+//            self.username = myTextField.text!.trimmingCharacters(in: .whitespaces).lowercased()
+//
+//            setUsernameInDefalts(username: self.username!)
+//
+//        } else {
+//            showAlertText(window: {}, message: "Type your username!")
+//        }
+//    }
+    
     private func setUsernameInDefalts(username: String) {
         if UserDefaults.standard.object(forKey: username) != nil {
             showGetPasswordAlert()
@@ -144,7 +155,8 @@ class ViewController: UIViewController {
     
     private func showGetPasswordAlert() {
         let alert = UIAlertController(title: "Password", message: "Enter your password", preferredStyle: .alert)
-        alert.addTextField(configurationHandler: { $0.placeholder = "Enter your password" })
+        alert.addTextField(configurationHandler: { $0.placeholder = "Enter your password"; $0.keyboardType = .default })
+      
         alert.addCancelAction()
         let okAction = UIAlertAction(title: "OK", style: .default) {[unowned self] _ in
             if let hasText = alert.textFields?.first?.hasText {
@@ -256,6 +268,7 @@ extension UIAlertController {
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        // self.goTo2VCAfterPassCheck()
         return true
     }
 }
