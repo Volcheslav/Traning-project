@@ -15,6 +15,8 @@ class ExchangeVC: UIViewController {
     
     private var url: String?
     
+    private var networkManager = NetworkManager()
+    
 //    @IBAction func startTouch(_ sender: UISegmentedControl) {
 //        let index = currenciesSegmentegContr.selectedSegmentIndex
 //         getCurrency(mode: index)
@@ -24,17 +26,17 @@ class ExchangeVC: UIViewController {
     @IBOutlet private weak var currenciesSegmentegContr: UISegmentedControl!
     @IBOutlet private weak var exchngeLabel: UILabel!
     
-    @IBAction func showCurrency(_ sender: UISegmentedControl) {
+    @IBAction private func showCurrency(_ sender: UISegmentedControl) {
        let index = currenciesSegmentegContr.selectedSegmentIndex
         getCurrency(mode: index)
-        print(exchangeInfo?.name ?? "no")
+        //print(exchangeInfo?.name ?? "no")
     }
     @IBAction private func getExchangeInfo(_ sender: UIButton) {
         getUSD(from: url!)
        guard let currentRate = exchangeInfo?.rate else { return }
         self.exchngeLabel.text = String(currentRate)
         
-        //print(self.allCurrences?.map{$0.abbreviation} ?? "no")
+// print(self.allCurrences?.map{$0.abbreviation} ?? "no")
     }
     
     private func getCurrency(mode: Int) {
@@ -44,7 +46,7 @@ class ExchangeVC: UIViewController {
         guard var urlComponents = URLComponents(string: APIConst.baseURL + currCode) else { return }
         urlComponents.queryItems = [URLQueryItem(name: APIConst.mode, value: "2")]
         guard let url = urlComponents.url else { return }
-        let task = URLSession.shared.dataTask(with: url, completionHandler: {data, response, error in
+        let task = URLSession.shared.dataTask(with: url, completionHandler: {data, _, error in
             guard let data = data, error == nil else {
                 print("Error")
                 return
@@ -62,19 +64,22 @@ class ExchangeVC: UIViewController {
                 return
             }
             
+            DispatchQueue.main.async {
+                self.exchngeLabel.text = String(json.rate)
+            }
             self.exchangeInfo = json
             
         })
         task.resume()
         
-        
-        
     }
     
-    
-    
     private func getUSD(from url: String) {
-        let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data, _, error in
+        guard var urlComponents = URLComponents(string: APIConst.baseURL + "usd") else { return }
+        urlComponents.queryItems = [URLQueryItem(name: APIConst.mode, value: "2")]
+        guard let url = urlComponents.url else { return }
+        let session = URLSession(configuration: .default)
+        let task = session.dataTask(with: url, completionHandler: {data, response, error in
             guard let data = data, error == nil else {
                 print("Error")
                 return
@@ -88,10 +93,9 @@ class ExchangeVC: UIViewController {
                 print("error")
             }
             
-            guard let json = result else {
-                return
-            }
-            self.exchangeInfo = json
+            self.exchangeInfo = result
+            DispatchQueue.main.async {
+                self.exchngeLabel.text = String(result!.rate)             }
             
         })
         task.resume()
@@ -126,6 +130,8 @@ class ExchangeVC: UIViewController {
         super.viewDidLoad()
         self.url = "https://www.nbrb.by/api/exrates/rates/usd?parammode=2"
         getAllMoney(from: "https://www.nbrb.by/api/exrates/currencies")
+        //networkManager.getUSD()
+        //networkManager.getCurrency(for: "eur")
         //getUSD(from: self.url!)
         // Do any additional setup after loading the view.
     }

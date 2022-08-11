@@ -20,6 +20,7 @@
 		533AD8702897DAB300843547 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533AD86F2897DAB300843547 /* LaunchScreen.storyboard */; };
 		533AD8792897DF0F00843547 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533AD8782897DF0E00843547 /* ViewController.swift */; };
 		533BA1C371FDF5CF0A677FE5 /* Pods_Training_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A65390072E74C6E9463A16B4 /* Pods_Training_Project.framework */; };
+		533D195428A5147900752071 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533D195328A5147900752071 /* NetworkManager.swift */; };
 		533D40B6289D1B1E00DC92A5 /* Collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533D40B5289D1B1E00DC92A5 /* Collection.storyboard */; };
 		533D40B9289D1C2300DC92A5 /* PicCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533D40B8289D1C2300DC92A5 /* PicCollection.swift */; };
 		533D40BC289D1E2500DC92A5 /* PicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533D40BB289D1E2500DC92A5 /* PicCell.swift */; };
@@ -65,6 +66,7 @@
 		533AD8662897DA5900843547 /* ThirdScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThirdScreen.storyboard; sourceTree = "<group>"; };
 		533AD86F2897DAB300843547 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		533AD8782897DF0E00843547 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		533D195328A5147900752071 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		533D40B5289D1B1E00DC92A5 /* Collection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Collection.storyboard; sourceTree = "<group>"; };
 		533D40B8289D1C2300DC92A5 /* PicCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicCollection.swift; sourceTree = "<group>"; };
 		533D40BB289D1E2500DC92A5 /* PicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicCell.swift; sourceTree = "<group>"; };
@@ -191,9 +193,18 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		533D195228A5145F00752071 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				533D195328A5147900752071 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		53400DE928A3E6480024C6EF /* Exchange */ = {
 			isa = PBXGroup;
 			children = (
+				533D195228A5145F00752071 /* Network */,
 				53400DEA28A3E66B0024C6EF /* Exchange.storyboard */,
 				53400DED28A3E6900024C6EF /* ExchangeVC.swift */,
 				53400DF028A3E8980024C6EF /* ExchangeStruct.swift */,
@@ -439,6 +450,7 @@
 				53400DEE28A3E6900024C6EF /* ExchangeVC.swift in Sources */,
 				53400DF128A3E8980024C6EF /* ExchangeStruct.swift in Sources */,
 				53376B8E289A756A00FB8AF2 /* LabelProtocol.swift in Sources */,
+				533D195428A5147900752071 /* NetworkManager.swift in Sources */,
 				539596EF28980F92009D0255 /* BlueVC.swift in Sources */,
 				5338179928A10F410014DF3F /* ViewImage.swift in Sources */,
 				539596E728980F19009D0255 /* OrangeVC.swift in Sources */,

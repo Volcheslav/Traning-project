@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct APIConst {
+enum APIConst {
     static let baseURL = "https://www.nbrb.by/api/exrates/rates/"
     static let code = "1"
     static let mode = "parammode"
-    //static let modeID = "1"
+    // static let modeID = "1"
 }
