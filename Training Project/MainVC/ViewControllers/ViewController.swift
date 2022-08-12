@@ -7,7 +7,7 @@
 import KeychainSwift
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     private var textFromAlert: String?
     
@@ -36,6 +36,18 @@ class ViewController: UIViewController {
         initializeHideKeyboard()
         myTextField.placeholder = "Enter your username"
         myTextField.delegate = self
+//        UserDefaults.standard.removeObject(forKey: "dimon")
+//        UserDefaults.standard.removeObject(forKey: "vlad")
+//        UserDefaults.standard.removeObject(forKey: "ivan")
+//        UserDefaults.standard.removeObject(forKey: "masha")
+//        UserDefaults.standard.removeObject(forKey: "alex")
+//
+//        keyChain.clear()
+//        keyChain.delete("dimon")
+//        keyChain.delete("vlad")
+//        keyChain.delete("ivan")
+//        keyChain.delete("masha")
+//        keyChain.delete("alex")
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -101,6 +113,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction private func goToSecondVC(_ sender: UIButton) {
+       goTo2VCAfterPassCheck()
+    }
+    
+    private func goTo2VCAfterPassCheck() {
         if myTextField.hasText {
             self.username = myTextField.text!.trimmingCharacters(in: .whitespaces).lowercased()
 
@@ -109,19 +125,7 @@ class ViewController: UIViewController {
         } else {
             showAlertText(window: {}, message: "Type your username!")
         }
-
     }
-    
-//    private func goTo2VCAfterPassCheck() {
-//        if myTextField.hasText {
-//            self.username = myTextField.text!.trimmingCharacters(in: .whitespaces).lowercased()
-//
-//            setUsernameInDefalts(username: self.username!)
-//
-//        } else {
-//            showAlertText(window: {}, message: "Type your username!")
-//        }
-//    }
     
     private func setUsernameInDefalts(username: String) {
         if UserDefaults.standard.object(forKey: username) != nil {
@@ -135,8 +139,8 @@ class ViewController: UIViewController {
     // MARK: Alert windows
     
     private func showSetPasswordAlert() {
-        let alert = UIAlertController(title: "Password", message: "Set your password, new user", preferredStyle: .alert)
-        alert.addTextField(configurationHandler: { $0.placeholder = "Enter your new password" })
+        let alert = UIAlertController(title: "PIN", message: "Set your PIN, new user", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: { $0.placeholder = "Enter your new PIN"; $0.keyboardType = .numberPad })
         alert.addCancelAction()
         let okAction = UIAlertAction(title: "OK", style: .default) {[unowned self] _ in
             if let hasText = alert.textFields?.first?.hasText {
@@ -145,7 +149,7 @@ class ViewController: UIViewController {
                     keyChain.set(alert.textFields!.first!.text!, forKey: self.username!)
                     showAlertText(window: showGetPasswordAlert, message: "Succes!!")
                 default:
-                    showAlertText(window: showSetPasswordAlert, message: "Type your password!")
+                    showAlertText(window: showSetPasswordAlert, message: "Type your PIN!")
                 }
             }
         }
@@ -154,8 +158,8 @@ class ViewController: UIViewController {
     }
     
     private func showGetPasswordAlert() {
-        let alert = UIAlertController(title: "Password", message: "Enter your password", preferredStyle: .alert)
-        alert.addTextField(configurationHandler: { $0.placeholder = "Enter your password"; $0.keyboardType = .default })
+        let alert = UIAlertController(title: "PIN", message: "Enter your PIN", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: { $0.placeholder = "Enter your PIN"; $0.keyboardType = .numberPad; $0.isSecureTextEntry = true })
       
         alert.addCancelAction()
         let okAction = UIAlertAction(title: "OK", style: .default) {[unowned self] _ in
@@ -167,10 +171,10 @@ class ViewController: UIViewController {
                     if passwordInMemory == passwordEntered {
                         self.performSegue(withIdentifier: "toSecondVC", sender: nil)
                     } else {
-                        showAlertText(window: showGetPasswordAlert, message: "Incorrect password!")
+                        showAlertText(window: showGetPasswordAlert, message: "Incorrect PIN!")
                     }
                 default:
-                    showAlertText(window: showGetPasswordAlert, message: "Type your password!")
+                    showAlertText(window: showGetPasswordAlert, message: "Type your PIN!")
                 }
             }
         }
@@ -268,7 +272,7 @@ extension UIAlertController {
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        // self.goTo2VCAfterPassCheck()
+        self.goTo2VCAfterPassCheck()
         return true
     }
 }

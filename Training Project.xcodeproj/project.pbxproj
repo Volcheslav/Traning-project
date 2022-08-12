@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,7 @@
 		53400DFB28A416CD0024C6EF /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53400DFA28A416CD0024C6EF /* API.swift */; };
 		53403B8228901F56003AE836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53403B8128901F56003AE836 /* AppDelegate.swift */; };
 		53403B8B28901F59003AE836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53403B8A28901F59003AE836 /* Assets.xcassets */; };
+		534278D828A65B5F008CA6D8 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534278D728A65B5F008CA6D8 /* Security.swift */; };
 		5343CF0A289C079100B13387 /* big bang.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF09289C079100B13387 /* big bang.jpg */; };
 		5343CF0D289C079900B13387 /* universe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF0C289C079900B13387 /* universe.jpg */; };
 		5343CF10289C07A000B13387 /* rocks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF0F289C07A000B13387 /* rocks.jpg */; };
@@ -79,6 +80,7 @@
 		53403B8128901F56003AE836 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53403B8A28901F59003AE836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53403B8F28901F59003AE836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		534278D728A65B5F008CA6D8 /* Security.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
 		5343CF09289C079100B13387 /* big bang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "big bang.jpg"; sourceTree = "<group>"; };
 		5343CF0C289C079900B13387 /* universe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = universe.jpg; sourceTree = "<group>"; };
 		5343CF0F289C07A000B13387 /* rocks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rocks.jpg; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				533AD8782897DF0E00843547 /* ViewController.swift */,
+				534278D728A65B5F008CA6D8 /* Security.swift */,
 				533AD8572897DA1900843547 /* MySecondViewController.swift */,
 				539596EB28980F59009D0255 /* PurpleVC.swift */,
 				539596E628980F19009D0255 /* OrangeVC.swift */,
@@ -472,6 +475,7 @@
 				539596EF28980F92009D0255 /* BlueVC.swift in Sources */,
 				5338179928A10F410014DF3F /* ViewImage.swift in Sources */,
 				539596E728980F19009D0255 /* OrangeVC.swift in Sources */,
+				534278D828A65B5F008CA6D8 /* Security.swift in Sources */,
 				533AD8792897DF0F00843547 /* ViewController.swift in Sources */,
 				53770C0B28A138B50019BFCF /* AnimationVC.swift in Sources */,
 				539596F228981070009D0255 /* GreenVC.swift in Sources */,
