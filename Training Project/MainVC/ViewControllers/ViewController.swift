@@ -118,7 +118,7 @@ final class ViewController: UIViewController {
     
     private func goTo2VCAfterPassCheck() {
         guard myTextField.hasText else {
-            showAlertText(window: {}, message: "Type your username!")
+            AlertWindows.showAlertText(window: {}, message: "Type your username!", viewcontroller: self)
             return
         }
             self.username = myTextField.text!.trimmingCharacters(in: .whitespaces).lowercased()
@@ -127,7 +127,7 @@ final class ViewController: UIViewController {
     }
 
     // MARK: Alert windows
-    
+        
     private func showSetPasswordAlert() {
         let alert = UIAlertController(title: "PIN", message: "Set your PIN, new user", preferredStyle: .alert)
         alert.addTextField(configurationHandler: { $0.placeholder = "Enter your new PIN"; $0.keyboardType = .numberPad })
@@ -138,9 +138,9 @@ final class ViewController: UIViewController {
                 case true:
                     Security.setPassword(password: alert.textFields!.first!.text!, username: self.username!)
                     // keyChain.set(alert.textFields!.first!.text!, forKey: self.username!)
-                    showAlertText(window: showGetPasswordAlert, message: "Succes!!")
+                    AlertWindows.showAlertText(window: showGetPasswordAlert, message: "Succes!!", viewcontroller: self)
                 default:
-                    showAlertText(window: showSetPasswordAlert, message: "Type your PIN!")
+                    AlertWindows.showAlertText(window: showSetPasswordAlert, message: "Type your PIN!", viewcontroller: self)
                 }
             }
         }
@@ -160,10 +160,10 @@ final class ViewController: UIViewController {
                     if Security.checkPassword(enteredPassword: alert.textFields!.first!.text!, username: self.username!) {
                         self.performSegue(withIdentifier: "toSecondVC", sender: nil)
                     } else {
-                        showAlertText(window: showGetPasswordAlert, message: "Incorrect PIN!")
+                        AlertWindows.showAlertText(window: showGetPasswordAlert, message: "Incorrect PIN!", viewcontroller: self, okButtonTitle: "Again")
                     }
                 default:
-                    showAlertText(window: showGetPasswordAlert, message: "Type your PIN!")
+                    AlertWindows.showAlertText(window: showGetPasswordAlert, message: "Type your PIN!", viewcontroller: self, okButtonTitle: "Again")
                 }
             }
         }
@@ -171,12 +171,12 @@ final class ViewController: UIViewController {
         present(alert, animated: true)
     }
     
-    private func showAlertText(window: @escaping () -> Void, message: String) {
-        let alert2 = UIAlertController(title: "Alert!", message: message, preferredStyle: .alert)
-        alert2.addAction(UIAlertAction(title: "Ok", style: .default) { _ in window() })
-        alert2.addCancelAction()
-        self.present(alert2, animated: true)
-    }
+//    private func showAlertText(window: @escaping () -> Void, message: String) {
+//        let alert2 = UIAlertController(title: "Alert!", message: message, preferredStyle: .alert)
+//        alert2.addAction(UIAlertAction(title: "Ok", style: .default) { _ in window() })
+//        alert2.addCancelAction()
+//        self.present(alert2, animated: true)
+//    }
 
 //    private func showAlertWindow() {
 //        let alert = UIAlertController(title: "Print something", message: "No numbers", preferredStyle: .alert)
@@ -248,13 +248,6 @@ extension String {
         }
         let hasNums = self.map { $0.isNumber }
         return hasNums.contains(true) ? true : false
-    }
-}
-
-extension UIAlertController {
-    func addCancelAction () {
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        self.addAction(cancelAction)
     }
 }
 

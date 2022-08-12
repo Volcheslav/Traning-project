@@ -6,6 +6,6 @@ target 'Training Project' do
   use_frameworks!
 
   # Pods for Training Project
-  pod 'SwiftLint', '0.48.0'
   pod 'KeychainSwift', '20.0.0'
+  pod 'SwiftLint', '0.48.0'
 end

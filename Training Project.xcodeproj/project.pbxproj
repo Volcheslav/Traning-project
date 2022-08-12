@@ -32,6 +32,7 @@
 		53403B8228901F56003AE836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53403B8128901F56003AE836 /* AppDelegate.swift */; };
 		53403B8B28901F59003AE836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53403B8A28901F59003AE836 /* Assets.xcassets */; };
 		534278D828A65B5F008CA6D8 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534278D728A65B5F008CA6D8 /* Security.swift */; };
+		534278DB28A663E1008CA6D8 /* AlertWindows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534278DA28A663E1008CA6D8 /* AlertWindows.swift */; };
 		5343CF0A289C079100B13387 /* big bang.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF09289C079100B13387 /* big bang.jpg */; };
 		5343CF0D289C079900B13387 /* universe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF0C289C079900B13387 /* universe.jpg */; };
 		5343CF10289C07A000B13387 /* rocks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF0F289C07A000B13387 /* rocks.jpg */; };
@@ -81,6 +82,7 @@
 		53403B8A28901F59003AE836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53403B8F28901F59003AE836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		534278D728A65B5F008CA6D8 /* Security.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
+		534278DA28A663E1008CA6D8 /* AlertWindows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWindows.swift; sourceTree = "<group>"; };
 		5343CF09289C079100B13387 /* big bang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "big bang.jpg"; sourceTree = "<group>"; };
 		5343CF0C289C079900B13387 /* universe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = universe.jpg; sourceTree = "<group>"; };
 		5343CF0F289C07A000B13387 /* rocks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rocks.jpg; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		5338179C28A11BE90014DF3F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				534278DA28A663E1008CA6D8 /* AlertWindows.swift */,
 				534278D728A65B5F008CA6D8 /* Security.swift */,
 				533AD8782897DF0E00843547 /* ViewController.swift */,
 				533AD8572897DA1900843547 /* MySecondViewController.swift */,
@@ -470,6 +473,7 @@
 			files = (
 				53400DEE28A3E6900024C6EF /* ExchangeVC.swift in Sources */,
 				53400DF128A3E8980024C6EF /* ExchangeStruct.swift in Sources */,
+				534278DB28A663E1008CA6D8 /* AlertWindows.swift in Sources */,
 				53376B8E289A756A00FB8AF2 /* LabelProtocol.swift in Sources */,
 				533D195428A5147900752071 /* NetworkManager.swift in Sources */,
 				539596EF28980F92009D0255 /* BlueVC.swift in Sources */,

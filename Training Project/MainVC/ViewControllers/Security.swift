@@ -8,7 +8,7 @@
 import Foundation
 import KeychainSwift
 
-class Security: UIViewController {
+enum Security {
     
    static var userDefaults = UserDefaults.standard
     
