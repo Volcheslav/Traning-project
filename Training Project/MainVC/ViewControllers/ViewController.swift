@@ -4,16 +4,16 @@
 //
 //  Created by VironIT on 7/26/22.
 //
-import KeychainSwift
+// import KeychainSwift
 import UIKit
 
 final class ViewController: UIViewController {
 
     private var textFromAlert: String?
     
-    private var userDefaults = UserDefaults.standard
-    
-    private var keyChain = KeychainSwift()
+//    private var userDefaults = UserDefaults.standard
+//
+//    private var keyChain = KeychainSwift()
     
     private var username: String?
 
@@ -117,23 +117,13 @@ final class ViewController: UIViewController {
     }
     
     private func goTo2VCAfterPassCheck() {
-        if myTextField.hasText {
-            self.username = myTextField.text!.trimmingCharacters(in: .whitespaces).lowercased()
-
-            setUsernameInDefalts(username: self.username!)
-
-        } else {
+        guard myTextField.hasText else {
             showAlertText(window: {}, message: "Type your username!")
+            return
         }
-    }
-    
-    private func setUsernameInDefalts(username: String) {
-        if UserDefaults.standard.object(forKey: username) != nil {
-            showGetPasswordAlert()
-        } else {
-        userDefaults.set(username, forKey: username)
-            showSetPasswordAlert()
-        }
+            self.username = myTextField.text!.trimmingCharacters(in: .whitespaces).lowercased()
+            Security.setUsernameInDefalts(username: self.username!, getPinAlert: showGetPasswordAlert, setPinAlert: showSetPasswordAlert)
+
     }
 
     // MARK: Alert windows
@@ -146,7 +136,8 @@ final class ViewController: UIViewController {
             if let hasText = alert.textFields?.first?.hasText {
                 switch hasText {
                 case true:
-                    keyChain.set(alert.textFields!.first!.text!, forKey: self.username!)
+                    Security.setPassword(password: alert.textFields!.first!.text!, username: self.username!)
+                    // keyChain.set(alert.textFields!.first!.text!, forKey: self.username!)
                     showAlertText(window: showGetPasswordAlert, message: "Succes!!")
                 default:
                     showAlertText(window: showSetPasswordAlert, message: "Type your PIN!")
@@ -166,9 +157,7 @@ final class ViewController: UIViewController {
             if let hasText = alert.textFields?.first?.hasText {
                 switch hasText {
                 case true:
-                    let passwordInMemory = keyChain.get(self.username!)
-                    let passwordEntered = alert.textFields!.first!.text!
-                    if passwordInMemory == passwordEntered {
+                    if Security.checkPassword(enteredPassword: alert.textFields!.first!.text!, username: self.username!) {
                         self.performSegue(withIdentifier: "toSecondVC", sender: nil)
                     } else {
                         showAlertText(window: showGetPasswordAlert, message: "Incorrect PIN!")

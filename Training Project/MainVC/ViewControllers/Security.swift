@@ -6,7 +6,30 @@
 //
 
 import Foundation
+import KeychainSwift
 
-struct Security {
-  
+class Security: UIViewController {
+    
+   static var userDefaults = UserDefaults.standard
+    
+   static var keyChain = KeychainSwift()
+    
+    static func setUsernameInDefalts(username: String, getPinAlert: @escaping () -> Void, setPinAlert: @escaping () -> Void) {
+        if UserDefaults.standard.object(forKey: username) != nil {
+            getPinAlert()
+        } else {
+        userDefaults.set(username, forKey: username)
+            setPinAlert()
+        }
+    }
+    
+    static func setPassword(password: String, username: String) {
+        keyChain.set(password, forKey: username)
+    }
+    
+    static func checkPassword(enteredPassword: String, username: String) -> Bool {
+        let passwordInMemory = keyChain.get(username)
+        
+        return passwordInMemory == enteredPassword
+    }
 }

@@ -148,8 +148,8 @@
 		5338179C28A11BE90014DF3F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				533AD8782897DF0E00843547 /* ViewController.swift */,
 				534278D728A65B5F008CA6D8 /* Security.swift */,
+				533AD8782897DF0E00843547 /* ViewController.swift */,
 				533AD8572897DA1900843547 /* MySecondViewController.swift */,
 				539596EB28980F59009D0255 /* PurpleVC.swift */,
 				539596E628980F19009D0255 /* OrangeVC.swift */,
