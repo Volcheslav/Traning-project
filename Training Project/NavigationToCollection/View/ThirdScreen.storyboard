@@ -28,7 +28,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ybS-Qi-uSq" kind="show" identifier="goToTable" id="Et9-fQ-uI1"/>
+                                    <segue destination="4dO-Wv-boj" kind="show" identifier="goToTable" id="Et9-fQ-uI1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovg-nb-OeB">
@@ -71,7 +71,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="tableVC" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="ybS-Qi-uSq" customClass="TabVC" customModule="Training_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kAc-Un-jJQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
@@ -91,7 +91,21 @@
                             <outletCollection property="gestureRecognizers" destination="jdb-8l-zVC" appends="YES" id="2ky-wO-1aJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="CVy-5V-nih"/>
+                    <navigationItem key="navigationItem" id="CVy-5V-nih">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="xHs-3D-rzQ">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="lZj-Zd-vus">
+                                <rect key="frame" x="231" y="11.5" width="163" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Table"/>
+                                    <segment title="Collection"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeToCollection:" destination="ybS-Qi-uSq" eventType="valueChanged" id="tDD-bo-xue"/>
+                                </connections>
+                            </segmentedControl>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUu-HX-POU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="c6S-nf-2kj" userLabel="Exit" sceneMemberID="exit"/>
@@ -101,7 +115,26 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1009" y="151"/>
+            <point key="canvasLocation" x="1918.840579710145" y="150.66964285714286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qMg-Kg-e1S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="4dO-Wv-boj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="mAt-yN-7lz"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4j1-FQ-G5z">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ybS-Qi-uSq" kind="relationship" relationship="rootViewController" id="i8f-Yz-cBv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pPq-lS-lm9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008.6956521739131" y="150.66964285714286"/>
         </scene>
     </scenes>
     <resources>

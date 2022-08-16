@@ -10,7 +10,18 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class PicCollection: UICollectionViewController {
-
+    @IBAction func toTable(_ sender: Any) {
+        let storybord = UIStoryboard(name: "ThirdScreen", bundle: nil)
+        
+        guard let viewController = storybord.instantiateViewController(identifier: "tableVC") as? TabVC else {
+            return
+        }
+        let nc = UINavigationController(rootViewController: viewController)
+        nc.modalPresentationStyle = .fullScreen
+        nc.modalTransitionStyle = .flipHorizontal
+       show(nc, sender: nil)
+    }
+    
     private let picNameArray: [String] = [
         "big bang",
         "universe",

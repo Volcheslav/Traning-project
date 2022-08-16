@@ -18,10 +18,13 @@ class ThirdVC: UIViewController {
     }
     @IBAction private func goToCollection(_ sender: UIButton) {
         let storybord = UIStoryboard(name: "Collection", bundle: nil)
+        
         guard let viewController = storybord.instantiateViewController(identifier: "picColVC") as? PicCollection else {
             return
         }
-        show(viewController, sender: nil)
+        let nc = UINavigationController(rootViewController: viewController)
+        nc.modalPresentationStyle = .fullScreen
+       show(nc, sender: nil)
     }
 
     @IBAction private func goToThirdVC (sender: UIStoryboardSegue) {}

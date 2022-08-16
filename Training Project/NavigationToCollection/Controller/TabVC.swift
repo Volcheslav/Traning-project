@@ -9,6 +9,18 @@ import UIKit
 
 class TabVC: UITableViewController {
 
+    @IBAction func changeToCollection(_ sender: Any) {
+        let storybord = UIStoryboard(name: "Collection", bundle: nil)
+        
+        guard let viewController = storybord.instantiateViewController(identifier: "picColVC") as? PicCollection else {
+            return
+        }
+        let nc = UINavigationController(rootViewController: viewController)
+        nc.modalPresentationStyle = .fullScreen
+        nc.modalTransitionStyle = .flipHorizontal
+       show(nc, sender: nil)
+    }
+    
     private let picNameArray: [String] = ["big bang", "universe", "rocks",
                                           "the dark sun", "the sun", "Earth",
                                           "Moon", "Rocket", "sphinks", "spacex", "mars"]

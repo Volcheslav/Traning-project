@@ -15,6 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cellID" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="p0j-LK-jHM" customClass="TableRealmCell" customModule="Training_Project" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -29,15 +30,22 @@
                             <outlet property="dataSource" destination="Vdd-SM-scc" id="lOs-X4-m1E"/>
                             <outlet property="delegate" destination="Vdd-SM-scc" id="sVB-MF-HIS"/>
                             <outletCollection property="gestureRecognizers" destination="6qP-P7-fhl" appends="YES" id="jHZ-R9-OcY"/>
+                            <outletCollection property="gestureRecognizers" destination="ID4-Fd-PK1" appends="YES" id="SKs-8S-4BJ"/>
                         </connections>
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jd3-an-KKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="FRK-SP-ytV" userLabel="Exit" sceneMemberID="exit"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="6qP-P7-fhl">
                     <connections>
                         <action selector="addMan:" destination="Vdd-SM-scc" id="1e4-ZV-X5d"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="ID4-Fd-PK1">
+                    <connections>
+                        <segue destination="FRK-SP-ytV" kind="unwind" unwindAction="unwindToFirstScreen:" id="yY6-X4-7ub"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="326" y="123"/>
         </scene>

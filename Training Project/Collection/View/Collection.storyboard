@@ -17,7 +17,7 @@
         <!--PicCollection-->
         <scene sceneID="5f8-0d-aaD">
             <objects>
-                <collectionViewController storyboardIdentifier="picColVC" title="PicCollection" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="I7z-9r-Jbm" customClass="PicCollection" customModule="Training_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="picColVC" title="PicCollection" modalPresentationStyle="fullScreen" id="I7z-9r-Jbm" customClass="PicCollection" customModule="Training_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Zgp-Gw-hpD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,6 +76,21 @@
                             <outletCollection property="gestureRecognizers" destination="Z6R-Yg-raN" appends="YES" id="qfF-oA-KhX"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="NbH-5U-7EM">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ntI-5H-ZIx">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" id="8Mn-aO-lUB">
+                                <rect key="frame" x="231" y="5.5" width="163" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Table"/>
+                                    <segment title="Collection"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toTable:" destination="I7z-9r-Jbm" eventType="valueChanged" id="MyB-01-WyV"/>
+                                </connections>
+                            </segmentedControl>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJL-Ba-oUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="OjT-v5-SYb" userLabel="Exit" sceneMemberID="exit"/>
@@ -85,7 +100,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="273.91304347826087" y="143.97321428571428"/>
+            <point key="canvasLocation" x="1184.0579710144928" y="143.97321428571428"/>
         </scene>
         <!--View Image-->
         <scene sceneID="ZY4-JF-BCV">
@@ -124,7 +139,25 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1049.2753623188407" y="143.97321428571428"/>
+            <point key="canvasLocation" x="1959.4202898550727" y="143.97321428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MlU-ST-CC1">
+            <objects>
+                <navigationController storyboardIdentifier="navCollectionView" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="gjA-kb-W0I" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jnh-MC-TG5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I7z-9r-Jbm" kind="relationship" relationship="rootViewController" id="hoz-br-oId"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HkA-Xf-Gih" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273.91304347826087" y="143.97321428571428"/>
         </scene>
     </scenes>
     <resources>
