@@ -122,34 +122,53 @@ final class ViewController: UIViewController {
             return
         }
             self.username = myTextField.text!.trimmingCharacters(in: .whitespaces).lowercased()
-            Security.setUsernameInDefalts(username: self.username!, getPinAlert: showGetPasswordAlert, setPinAlert: showSetPasswordAlert)
+        Security.shared.setUsernameInDefalts(username: self.username!, getPinAlert: showGetPasswordAlert, setPinAlert: showSetPasswordAlert)
 
     }
 
     // MARK: Alert windows
     
-    private enum AlertWindowText: String {
-        case pin = "PIN"
-        case type = "Type your PIN!"
-        case ok = "OK"
-        case again = "Again"
-        case set = "Set your PIN, new user"
-        case succes = "Succes!!"
-        case pinError = "Incorrect PIN!"
+ private enum AlertWindowText: String {
+        case pin 
+        case type
+        case ok
+        case again
+        case set
+        case succes
+        case pinError
+        
+        var text: String {
+            switch self {
+            case .pin:
+                return "PIN"
+            case .type:
+                return "Type your PIN!"
+            case .ok:
+                return "OK"
+            case .again:
+                return "Again"
+            case .set:
+                return "Set your PIN, new user"
+            case .succes:
+                return "Succes!!"
+            case .pinError:
+                return "Incorrect PIN"
+            }
+        }
     }
     
     private func showSetPasswordAlert() {
-        let alert = UIAlertController(title: AlertWindowText.pin.rawValue, message: AlertWindowText.set.rawValue, preferredStyle: .alert)
-        alert.addTextField(configurationHandler: { $0.placeholder = AlertWindowText.type.rawValue; $0.keyboardType = .numberPad })
+        let alert = UIAlertController(title: AlertWindowText.pin.text, message: AlertWindowText.set.text, preferredStyle: .alert)
+        alert.addTextField(configurationHandler: { $0.placeholder = AlertWindowText.type.text; $0.keyboardType = .numberPad })
         alert.addCancelAction()
-        let okAction = UIAlertAction(title: AlertWindowText.ok.rawValue, style: .default) {[unowned self] _ in
+        let okAction = UIAlertAction(title: AlertWindowText.ok.text, style: .default) {[unowned self] _ in
             if let hasText = alert.textFields?.first?.hasText {
                 switch hasText {
                 case true:
-                    Security.setPassword(password: alert.textFields!.first!.text!, username: self.username!)
-                    AlertWindows.showAlertText(window: showGetPasswordAlert, message: AlertWindowText.succes.rawValue, viewcontroller: self)
+                    Security.shared.setPassword(password: alert.textFields!.first!.text!, username: self.username!)
+                    AlertWindows.showAlertText(window: showGetPasswordAlert, message: AlertWindowText.succes.text, viewcontroller: self)
                 default:
-                    AlertWindows.showAlertText(window: showSetPasswordAlert, message: AlertWindowText.type.rawValue, viewcontroller: self)
+                    AlertWindows.showAlertText(window: showSetPasswordAlert, message: AlertWindowText.type.text, viewcontroller: self)
                 }
             }
         }
@@ -158,21 +177,21 @@ final class ViewController: UIViewController {
     }
     
     private func showGetPasswordAlert() {
-        let alert = UIAlertController(title: AlertWindowText.pin.rawValue, message: AlertWindowText.type.rawValue, preferredStyle: .alert)
-        alert.addTextField(configurationHandler: { $0.placeholder = AlertWindowText.type.rawValue; $0.keyboardType = .numberPad; $0.isSecureTextEntry = true })
+        let alert = UIAlertController(title: AlertWindowText.pin.rawValue, message: AlertWindowText.type.text, preferredStyle: .alert)
+        alert.addTextField(configurationHandler: { $0.placeholder = AlertWindowText.type.text; $0.keyboardType = .numberPad; $0.isSecureTextEntry = true })
       
         alert.addCancelAction()
-        let okAction = UIAlertAction(title: AlertWindowText.ok.rawValue, style: .default) {[unowned self] _ in
+        let okAction = UIAlertAction(title: AlertWindowText.ok.text, style: .default) {[unowned self] _ in
             if let hasText = alert.textFields?.first?.hasText {
                 switch hasText {
                 case true:
-                    if Security.checkPassword(enteredPassword: alert.textFields!.first!.text!, username: self.username!) {
+                    if Security.shared.checkPassword(enteredPassword: alert.textFields!.first!.text!, username: self.username!) {
                         self.performSegue(withIdentifier: "toSecondVC", sender: nil)
                     } else {
-                        AlertWindows.showAlertText(window: showGetPasswordAlert, message: AlertWindowText.pinError.rawValue, viewcontroller: self, okButtonTitle: AlertWindowText.again.rawValue)
+                        AlertWindows.showAlertText(window: showGetPasswordAlert, message: AlertWindowText.pinError.text, viewcontroller: self, okButtonTitle: AlertWindowText.again.text)
                     }
                 default:
-                    AlertWindows.showAlertText(window: showGetPasswordAlert, message: AlertWindowText.type.rawValue, viewcontroller: self, okButtonTitle: AlertWindowText.again.rawValue)
+                    AlertWindows.showAlertText(window: showGetPasswordAlert, message: AlertWindowText.type.rawValue, viewcontroller: self, okButtonTitle: AlertWindowText.again.text)
                 }
             }
         }

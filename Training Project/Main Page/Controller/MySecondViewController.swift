@@ -13,6 +13,11 @@ class MySecondViewController: UIViewController {
     @IBOutlet private weak var alertLabel: UILabel!
     @IBOutlet private weak var secondScreenLabel: UILabel!
 
+    @IBAction private func goToTableRealm(_ sender: UIButton) {
+        let storybord = UIStoryboard(name: "TableRealm", bundle: nil)
+        let tabVC = storybord.instantiateViewController(identifier: "realmTab") as TableRealm
+        show(tabVC, sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 //        if let text = UserDefaults.standard.object(forKey: "str") as? String {

@@ -8,13 +8,16 @@
 import Foundation
 import KeychainSwift
 
-enum Security {
+class Security {
     
-   static var userDefaults = UserDefaults.standard
+   static var shared = Security()
+   private var userDefaults = UserDefaults.standard
     
-   static var keyChain = KeychainSwift()
+   private var keyChain = KeychainSwift()
     
-    static func setUsernameInDefalts(username: String, getPinAlert: @escaping () -> Void, setPinAlert: @escaping () -> Void) {
+    private init() {}
+    
+     func setUsernameInDefalts(username: String, getPinAlert: @escaping () -> Void, setPinAlert: @escaping () -> Void) {
         if UserDefaults.standard.object(forKey: username) != nil {
             getPinAlert()
         } else {
@@ -23,11 +26,11 @@ enum Security {
         }
     }
     
-    static func setPassword(password: String, username: String) {
+    func setPassword(password: String, username: String) {
         keyChain.set(password, forKey: username)
     }
     
-    static func checkPassword(enteredPassword: String, username: String) -> Bool {
+    func checkPassword(enteredPassword: String, username: String) -> Bool {
         let passwordInMemory = keyChain.get(username)
         
         return passwordInMemory == enteredPassword

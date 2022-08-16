@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlertWindows: UIAlertController {
+open class AlertWindows: UIAlertController {
     static func showAlertText(window: @escaping () -> Void, message: String, viewcontroller: UIViewController, okButtonTitle: String) {
         let alert2 = UIAlertController(title: "Alert!", message: message, preferredStyle: .alert)
         alert2.addAction(UIAlertAction(title: okButtonTitle, style: .default) { _ in window() })

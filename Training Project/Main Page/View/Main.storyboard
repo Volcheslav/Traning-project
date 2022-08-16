@@ -207,6 +207,16 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPc-tF-gKq">
+                                <rect key="frame" x="112.5" y="148" width="189" height="52"/>
+                                <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="40"/>
+                                <state key="normal" title="To Realm DB">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToTableRealm:" destination="L1J-A7-7oR" eventType="touchUpInside" id="h8g-re-WG0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Voz-RR-DHU"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
@@ -215,10 +225,12 @@
                             <constraint firstAttribute="trailing" secondItem="Pez-cV-I46" secondAttribute="trailing" constant="10" id="LqJ-XP-nVZ"/>
                             <constraint firstItem="Pez-cV-I46" firstAttribute="centerX" secondItem="YWt-9E-MAI" secondAttribute="centerX" id="afy-E9-dCG"/>
                             <constraint firstItem="Voz-RR-DHU" firstAttribute="bottom" secondItem="nv7-5b-AEs" secondAttribute="bottom" constant="30" id="joi-ks-OgC"/>
+                            <constraint firstItem="QPc-tF-gKq" firstAttribute="centerX" secondItem="YWt-9E-MAI" secondAttribute="centerX" id="kWO-iC-80C"/>
                             <constraint firstItem="XFG-de-hsN" firstAttribute="centerX" secondItem="YWt-9E-MAI" secondAttribute="centerX" id="o0C-Fv-IN4"/>
                             <constraint firstItem="nv7-5b-AEs" firstAttribute="centerX" secondItem="YWt-9E-MAI" secondAttribute="centerX" id="qWe-lf-Av1"/>
                             <constraint firstItem="Pez-cV-I46" firstAttribute="top" secondItem="XFG-de-hsN" secondAttribute="bottom" constant="100" id="vUQ-qf-DKm"/>
                             <constraint firstItem="Pez-cV-I46" firstAttribute="leading" secondItem="YWt-9E-MAI" secondAttribute="leading" constant="10" id="w7c-3c-33W"/>
+                            <constraint firstItem="XFG-de-hsN" firstAttribute="top" secondItem="QPc-tF-gKq" secondAttribute="bottom" constant="50" id="y4h-4R-cvC"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" id="kdB-bW-oNV">
