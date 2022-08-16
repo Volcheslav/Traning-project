@@ -27,12 +27,16 @@ class TableRealm: UITableViewController {
         showSetNameAlert()
     }
     
-    // @objc func addItem
+    @objc func addItem(_ sender: AnyObject) {
+    showSetNameAlert()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         items = realm.objects(Man.self)
+        print(items.count)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -47,7 +51,9 @@ class TableRealm: UITableViewController {
         alert.addTextField(configurationHandler: { $0.placeholder = "Surname"})
         alert.addCancelAction()
         let okAction = UIAlertAction(title: "OK", style: .default) {[unowned self] _ in
-            guard let textName = alert.textFields?.first?.text, let textSurname = alert.textFields?.last?.text, !textName.isEmpty, !textSurname.isEmpty else {
+            guard let textName = alert.textFields?.first?.text,
+                  let textSurname = alert.textFields?.last?.text,
+                  !textName.isEmpty, !textSurname.isEmpty else {
                 return
             }
             
@@ -55,9 +61,12 @@ class TableRealm: UITableViewController {
             man.name = textName
             man.surname = textSurname
             
-            try! self.realm.write {
-                self.realm.add(man)
+            try! realm.write {
+                realm.add(man)
+                tableView.reloadData()
             }
+            
+            
         }
         alert.addAction(okAction)
         present(alert, animated: true)
@@ -65,14 +74,14 @@ class TableRealm: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        guard items.isEmpty else {
+        guard !items.isEmpty else {
             return 0
         }
         return items.count
@@ -80,13 +89,10 @@ class TableRealm: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath) //as! TableRealmCell
         let item = items[indexPath.row]
-        
         cell.textLabel?.text = "\(item.name) \(item.surname)"
-
-        // Configure the cell...
-
+      //  cell.cellTextlabel.text = "\(item.name)  \(item.surname)"
         return cell
     }
   

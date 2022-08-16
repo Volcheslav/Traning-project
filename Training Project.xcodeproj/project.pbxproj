@@ -48,6 +48,8 @@
 		5343CF25289C07CF00B13387 /* spacex.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF24289C07CF00B13387 /* spacex.jpg */; };
 		5343CF28289C07D500B13387 /* mars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5343CF27289C07D500B13387 /* mars.jpg */; };
 		5343CF2B289C0EC700B13387 /* TabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5343CF2A289C0EC700B13387 /* TabVC.swift */; };
+		5349C88728ABA83C002BF240 /* TableRealmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5349C88528ABA83C002BF240 /* TableRealmCell.swift */; };
+		5349C88828ABA83C002BF240 /* TableRealmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5349C88628ABA83C002BF240 /* TableRealmCell.xib */; };
 		53770C0428A138750019BFCF /* Animation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53770C0328A138750019BFCF /* Animation.storyboard */; };
 		53770C0B28A138B50019BFCF /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53770C0A28A138B50019BFCF /* AnimationVC.swift */; };
 		539596E728980F19009D0255 /* OrangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539596E628980F19009D0255 /* OrangeVC.swift */; };
@@ -101,6 +103,8 @@
 		5343CF24289C07CF00B13387 /* spacex.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spacex.jpg; sourceTree = "<group>"; };
 		5343CF27289C07D500B13387 /* mars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mars.jpg; sourceTree = "<group>"; };
 		5343CF2A289C0EC700B13387 /* TabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabVC.swift; sourceTree = "<group>"; };
+		5349C88528ABA83C002BF240 /* TableRealmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRealmCell.swift; sourceTree = "<group>"; };
+		5349C88628ABA83C002BF240 /* TableRealmCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableRealmCell.xib; sourceTree = "<group>"; };
 		53770C0328A138750019BFCF /* Animation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Animation.storyboard; sourceTree = "<group>"; };
 		53770C0A28A138B50019BFCF /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
 		539596E628980F19009D0255 /* OrangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeVC.swift; sourceTree = "<group>"; };
@@ -414,6 +418,8 @@
 			isa = PBXGroup;
 			children = (
 				5340A89228AA55F700ABCE60 /* TableRealm.storyboard */,
+				5349C88528ABA83C002BF240 /* TableRealmCell.swift */,
+				5349C88628ABA83C002BF240 /* TableRealmCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -561,6 +567,7 @@
 				533AD8422897D99A00843547 /* magnifika.otf in Resources */,
 				53403B8B28901F59003AE836 /* Assets.xcassets in Resources */,
 				5343CF16289C07AE00B13387 /* the sun.jpg in Resources */,
+				5349C88828ABA83C002BF240 /* TableRealmCell.xib in Resources */,
 				53770C0428A138750019BFCF /* Animation.storyboard in Resources */,
 				533AD84C2897D9D200843547 /* Main.storyboard in Resources */,
 				53E413C2289178D600953A5F /* StayALiveAlt1.otf in Resources */,
@@ -635,6 +642,7 @@
 			files = (
 				5340A85E28AA469000ABCE60 /* Training Project.xcdatamodeld in Sources */,
 				53400DEE28A3E6900024C6EF /* ExchangeVC.swift in Sources */,
+				5349C88728ABA83C002BF240 /* TableRealmCell.swift in Sources */,
 				53400DF128A3E8980024C6EF /* ExchangeStruct.swift in Sources */,
 				534278DB28A663E1008CA6D8 /* AlertWindows.swift in Sources */,
 				53376B8E289A756A00FB8AF2 /* LabelProtocol.swift in Sources */,
