@@ -1,5 +1,6 @@
 PODS:
   - KeychainSwift (20.0.0)
+  - lottie-ios (3.4.2)
   - Realm (10.0.0):
     - Realm/Headers (= 10.0.0)
   - Realm/Headers (10.0.0)
@@ -9,22 +10,25 @@ PODS:
 
 DEPENDENCIES:
   - KeychainSwift (= 20.0.0)
+  - lottie-ios
   - RealmSwift (= 10.0.0)
   - SwiftLint (= 0.48.0)
 
 SPEC REPOS:
   trunk:
     - KeychainSwift
+    - lottie-ios
     - Realm
     - RealmSwift
     - SwiftLint
 
 SPEC CHECKSUMS:
   KeychainSwift: 0ce6a4d13f7228054d1a71bb1b500448fb2ab837
+  lottie-ios: 6bbc53eef6957e4744a50321507015fba72d8ca6
   Realm: 5654b8e5e45034d07b219e089034be2ef7d1e7bf
   RealmSwift: 5b4c8c85be4c14ff52054a4d80a8d338167dd79c
   SwiftLint: 284cea64b6187c5d6bd83e9a548a64104d546447
 
-PODFILE CHECKSUM: 3e2a156fee706f5d99bdc8f049dab7262f87890b
+PODFILE CHECKSUM: 224ea4afc31686602ac701c117e04da4b1160720
 
 COCOAPODS: 1.8.4

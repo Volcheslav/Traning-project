@@ -56,6 +56,7 @@
 		539596EC28980F59009D0255 /* PurpleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539596EB28980F59009D0255 /* PurpleVC.swift */; };
 		539596EF28980F92009D0255 /* BlueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539596EE28980F92009D0255 /* BlueVC.swift */; };
 		539596F228981070009D0255 /* GreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539596F128981070009D0255 /* GreenVC.swift */; };
+		53C3FF9A28ACF2CD006F6506 /* switchButton.json in Resources */ = {isa = PBXBuildFile; fileRef = 53C3FF9928ACF2CD006F6506 /* switchButton.json */; };
 		53E413C2289178D600953A5F /* StayALiveAlt1.otf in Resources */ = {isa = PBXBuildFile; fileRef = 53E413C1289178D600953A5F /* StayALiveAlt1.otf */; };
 		53E8A44C28929E3D0023C0EC /* bcgrng.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 53E8A44B28929E3D0023C0EC /* bcgrng.jpg */; };
 /* End PBXBuildFile section */
@@ -111,6 +112,7 @@
 		539596EB28980F59009D0255 /* PurpleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleVC.swift; sourceTree = "<group>"; };
 		539596EE28980F92009D0255 /* BlueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueVC.swift; sourceTree = "<group>"; };
 		539596F128981070009D0255 /* GreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenVC.swift; sourceTree = "<group>"; };
+		53C3FF9928ACF2CD006F6506 /* switchButton.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = switchButton.json; sourceTree = "<group>"; };
 		53E413C1289178D600953A5F /* StayALiveAlt1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StayALiveAlt1.otf; sourceTree = "<group>"; };
 		53E8A44B28929E3D0023C0EC /* bcgrng.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bcgrng.jpg; sourceTree = "<group>"; };
 		A65390072E74C6E9463A16B4 /* Pods_Training_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Training_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,6 +262,7 @@
 		5340CC1128ABA071006AB328 /* Supporing Files */ = {
 			isa = PBXGroup;
 			children = (
+				53C3FF9728ACF2AF006F6506 /* Lottie-Animations */,
 				53220D2D28929E9E00CA9D06 /* Picture */,
 				53E413B92891774500953A5F /* Fonts */,
 				53403B8F28901F59003AE836 /* Info.plist */,
@@ -460,6 +463,14 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		53C3FF9728ACF2AF006F6506 /* Lottie-Animations */ = {
+			isa = PBXGroup;
+			children = (
+				53C3FF9928ACF2CD006F6506 /* switchButton.json */,
+			);
+			path = "Lottie-Animations";
+			sourceTree = "<group>";
+		};
 		53E413B92891774500953A5F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -549,6 +560,7 @@
 			files = (
 				5343CF1C289C07BC00B13387 /* Moon.jpg in Resources */,
 				533AD8702897DAB300843547 /* LaunchScreen.storyboard in Resources */,
+				53C3FF9A28ACF2CD006F6506 /* switchButton.json in Resources */,
 				533AD8482897D9B100843547 /* StayALive.otf in Resources */,
 				533D40B6289D1B1E00DC92A5 /* Collection.storyboard in Resources */,
 				5343CF1F289C07C300B13387 /* Rocket.jpg in Resources */,

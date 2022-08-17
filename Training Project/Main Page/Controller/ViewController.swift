@@ -5,6 +5,7 @@
 //  Created by VironIT on 7/26/22.
 //
 // import KeychainSwift
+import Lottie
 import UIKit
 
 final class ViewController: UIViewController {
@@ -29,13 +30,27 @@ final class ViewController: UIViewController {
 
     @IBOutlet private weak var myButton: UIButton!
 
+    @IBAction private func changeBackgrowndSwitch(_ sender: AnimatedSwitch) {
+        if sender.isOn {
+                self.myBackground.image = UIImage(named: "backgrownd")
+        } else {
+                self.myBackground.image = UIImage(named: "lake")
+        }
+    }
+    @IBOutlet private weak var animatedSwitch: AnimatedSwitch!
     // MARK: View load functions
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        animatedSwitch.animation = Animation.named("switchButton")
+        animatedSwitch.setProgressForState(fromProgress: 0, toProgress: 0.5, forOnState: false)
+        animatedSwitch.setProgressForState(fromProgress: 0.5, toProgress: 1, forOnState: true)
+        animatedSwitch.animationSpeed = 3
+        animatedSwitch.isOn = true
         initializeHideKeyboard()
         myTextField.placeholder = "Enter your username"
         myTextField.delegate = self
+        
 //        UserDefaults.standard.removeObject(forKey: "dimon")
 //        UserDefaults.standard.removeObject(forKey: "vlad")
 //        UserDefaults.standard.removeObject(forKey: "ivan")

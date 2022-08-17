@@ -7,6 +7,7 @@ target 'Training Project' do
 
   # Pods for Training Project
   pod 'KeychainSwift', '20.0.0'
+  pod 'lottie-ios', '3.4.2'
   pod 'RealmSwift','10.0.0'
   pod 'SwiftLint', '0.48.0'
 end
