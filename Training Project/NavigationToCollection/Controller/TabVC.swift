@@ -9,7 +9,7 @@ import UIKit
 
 class TabVC: UITableViewController {
 
-    @IBAction func changeToCollection(_ sender: Any) {
+    @IBAction private func changeToCollection(_ sender: Any) {
         let storybord = UIStoryboard(name: "Collection", bundle: nil)
         
         guard let viewController = storybord.instantiateViewController(identifier: "picColVC") as? PicCollection else {

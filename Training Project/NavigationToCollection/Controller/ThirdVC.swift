@@ -16,6 +16,13 @@ class ThirdVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction private func goToImageFromURL(_ sender: UIButton) {
+        let storybord = UIStoryboard(name: "ImageFromURL", bundle: nil)
+        guard let vc = storybord.instantiateViewController(identifier: "imgFromURLVC") as? ImageFromURLViewController else {
+            return
+        }
+        show(vc, sender: nil)
+    }
     @IBAction private func goToCollection(_ sender: UIButton) {
         let storybord = UIStoryboard(name: "Collection", bundle: nil)
         

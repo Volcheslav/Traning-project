@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53112F7728AD300700F9ADAC /* ImageFromURL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53112F7628AD300700F9ADAC /* ImageFromURL.storyboard */; };
+		53112F7E28AD30A000F9ADAC /* ImageFromURLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53112F7D28AD30A000F9ADAC /* ImageFromURLViewController.swift */; };
+		53112F8128AD334D00F9ADAC /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53112F8028AD334D00F9ADAC /* PersonModel.swift */; };
+		53112F8428AD33B900F9ADAC /* PersonURl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53112F8328AD33B900F9ADAC /* PersonURl.swift */; };
 		53376B8E289A756A00FB8AF2 /* LabelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53376B8D289A756A00FB8AF2 /* LabelProtocol.swift */; };
 		53376B94289A7A2600FB8AF2 /* BarsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53376B93289A7A2600FB8AF2 /* BarsProtocol.swift */; };
 		5338179928A10F410014DF3F /* ViewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5338179828A10F410014DF3F /* ViewImage.swift */; };
@@ -62,6 +66,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53112F7628AD300700F9ADAC /* ImageFromURL.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageFromURL.storyboard; sourceTree = "<group>"; };
+		53112F7D28AD30A000F9ADAC /* ImageFromURLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFromURLViewController.swift; sourceTree = "<group>"; };
+		53112F8028AD334D00F9ADAC /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		53112F8328AD33B900F9ADAC /* PersonURl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonURl.swift; sourceTree = "<group>"; };
 		53376B8D289A756A00FB8AF2 /* LabelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelProtocol.swift; sourceTree = "<group>"; };
 		53376B93289A7A2600FB8AF2 /* BarsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarsProtocol.swift; sourceTree = "<group>"; };
 		5338179828A10F410014DF3F /* ViewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewImage.swift; sourceTree = "<group>"; };
@@ -132,6 +140,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53112F7228AD2F4E00F9ADAC /* ImageFromURL */ = {
+			isa = PBXGroup;
+			children = (
+				53112F7528AD2F7000F9ADAC /* Model */,
+				53112F7428AD2F6800F9ADAC /* View */,
+				53112F7328AD2F5F00F9ADAC /* Controller */,
+			);
+			path = ImageFromURL;
+			sourceTree = "<group>";
+		};
+		53112F7328AD2F5F00F9ADAC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				53112F7D28AD30A000F9ADAC /* ImageFromURLViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		53112F7428AD2F6800F9ADAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53112F7628AD300700F9ADAC /* ImageFromURL.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		53112F7528AD2F7000F9ADAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				53112F8028AD334D00F9ADAC /* PersonModel.swift */,
+				53112F8328AD33B900F9ADAC /* PersonURl.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		53220D2D28929E9E00CA9D06 /* Picture */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +250,7 @@
 				53770C0128A138480019BFCF /* Animations */,
 				53400DE928A3E6480024C6EF /* Exchange */,
 				533817A128A11C7B0014DF3F /* Collection */,
+				53112F7228AD2F4E00F9ADAC /* ImageFromURL */,
 				5338179E28A11C390014DF3F /* NavigationToCollection */,
 				5340A89028AA55B800ABCE60 /* TableWithRealm */,
 				5340CC1128ABA071006AB328 /* Supporing Files */,
@@ -572,6 +616,7 @@
 				53400DEB28A3E66B0024C6EF /* Exchange.storyboard in Resources */,
 				5343CF13289C07A800B13387 /* the dark sun.jpg in Resources */,
 				5343CF25289C07CF00B13387 /* spacex.jpg in Resources */,
+				53112F7728AD300700F9ADAC /* ImageFromURL.storyboard in Resources */,
 				53E8A44C28929E3D0023C0EC /* bcgrng.jpg in Resources */,
 				5343CF22289C07C900B13387 /* sphinks.jpg in Resources */,
 				5343CF10289C07A000B13387 /* rocks.jpg in Resources */,
@@ -660,6 +705,7 @@
 				53376B8E289A756A00FB8AF2 /* LabelProtocol.swift in Sources */,
 				533D195428A5147900752071 /* NetworkManager.swift in Sources */,
 				539596EF28980F92009D0255 /* BlueVC.swift in Sources */,
+				53112F8128AD334D00F9ADAC /* PersonModel.swift in Sources */,
 				5338179928A10F410014DF3F /* ViewImage.swift in Sources */,
 				5340A89E28AA589600ABCE60 /* TableRealm.swift in Sources */,
 				539596E728980F19009D0255 /* OrangeVC.swift in Sources */,
@@ -667,6 +713,7 @@
 				533AD8792897DF0F00843547 /* ViewController.swift in Sources */,
 				53770C0B28A138B50019BFCF /* AnimationVC.swift in Sources */,
 				539596F228981070009D0255 /* GreenVC.swift in Sources */,
+				53112F8428AD33B900F9ADAC /* PersonURl.swift in Sources */,
 				533AD8582897DA1A00843547 /* MySecondViewController.swift in Sources */,
 				5343CF2B289C0EC700B13387 /* TabVC.swift in Sources */,
 				53403B8228901F56003AE836 /* AppDelegate.swift in Sources */,
@@ -675,6 +722,7 @@
 				53400DFB28A416CD0024C6EF /* API.swift in Sources */,
 				53376B94289A7A2600FB8AF2 /* BarsProtocol.swift in Sources */,
 				53400DF728A3FC980024C6EF /* Currency.swift in Sources */,
+				53112F7E28AD30A000F9ADAC /* ImageFromURLViewController.swift in Sources */,
 				533D40B9289D1C2300DC92A5 /* PicCollection.swift in Sources */,
 				539596EC28980F59009D0255 /* PurpleVC.swift in Sources */,
 				533AD8502897D9EE00843547 /* SceneDelegate.swift in Sources */,

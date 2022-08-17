@@ -9,7 +9,7 @@ import UIKit
 
 class TableRealmCell: UITableViewCell {
 
-    @IBOutlet weak var cellTextlabel: UILabel!
+    @IBOutlet private weak var cellTextlabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

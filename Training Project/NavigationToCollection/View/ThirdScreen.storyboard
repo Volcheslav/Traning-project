@@ -41,6 +41,17 @@
                                     <action selector="goToCollection:" destination="2il-P3-XHU" eventType="touchUpInside" id="jbM-ud-Eqh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqa-4D-evr">
+                                <rect key="frame" x="73" y="297" width="278" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Magnifka" family="Magnifka" pointSize="40"/>
+                                <state key="normal" title="To ImageFrom URL">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToImageFromURL:" destination="2il-P3-XHU" eventType="touchUpInside" id="nWG-wr-ItD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DJ8-ye-pWJ"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
@@ -93,7 +104,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="CVy-5V-nih">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="xHs-3D-rzQ">
-                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="lZj-Zd-vus">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="lZj-Zd-vus">
                                 <rect key="frame" x="231" y="11.5" width="163" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>

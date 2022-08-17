@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image From URL View Controller-->
+        <scene sceneID="Z1g-cM-U6Z">
+            <objects>
+                <viewController storyboardIdentifier="imgFromURLVC" modalPresentationStyle="fullScreen" id="vwS-9S-V4R" customClass="ImageFromURLViewController" customModule="Training_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xpz-D6-Mii">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0d5-ys-n9K">
+                                <rect key="frame" x="0.0" y="257" width="414" height="382"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVn-Eq-4IT">
+                                <rect key="frame" x="89.5" y="721" width="235" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Get person"/>
+                                <connections>
+                                    <action selector="getPersonInfoFromURL:" destination="vwS-9S-V4R" eventType="touchUpInside" id="WiJ-Wt-j6M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4x3-mh-AV8">
+                                <rect key="frame" x="176" y="819" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="print info"/>
+                                <connections>
+                                    <action selector="printinfo:" destination="vwS-9S-V4R" eventType="touchUpInside" id="06N-uJ-uYl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcR-7x-oRL">
+                                <rect key="frame" x="207" y="671" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HXy-MD-qGp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="OVn-Eq-4IT" firstAttribute="centerX" secondItem="Xpz-D6-Mii" secondAttribute="centerX" id="2eX-QR-FKW"/>
+                            <constraint firstItem="rcR-7x-oRL" firstAttribute="top" secondItem="0d5-ys-n9K" secondAttribute="bottom" constant="32" id="D4F-Qx-Liv"/>
+                            <constraint firstItem="rcR-7x-oRL" firstAttribute="centerX" secondItem="Xpz-D6-Mii" secondAttribute="centerX" id="IRZ-2u-pW8"/>
+                            <constraint firstItem="0d5-ys-n9K" firstAttribute="top" secondItem="HXy-MD-qGp" secondAttribute="top" constant="213" id="KP2-Fa-fUe"/>
+                            <constraint firstItem="OVn-Eq-4IT" firstAttribute="top" secondItem="0d5-ys-n9K" secondAttribute="bottom" constant="82" id="dGT-0i-owk"/>
+                            <constraint firstItem="0d5-ys-n9K" firstAttribute="centerY" secondItem="Xpz-D6-Mii" secondAttribute="centerY" id="eng-Dk-jbx"/>
+                            <constraint firstItem="0d5-ys-n9K" firstAttribute="trailing" secondItem="HXy-MD-qGp" secondAttribute="trailing" id="hVQ-LM-clu"/>
+                            <constraint firstItem="0d5-ys-n9K" firstAttribute="centerX" secondItem="Xpz-D6-Mii" secondAttribute="centerX" id="tA2-Ij-2FZ"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="K3Z-QD-OBl" appends="YES" id="Reh-G3-WiS"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="fromURLImageView" destination="0d5-ys-n9K" id="bc6-Mh-vt1"/>
+                        <outlet property="nameLabel" destination="rcR-7x-oRL" id="LKd-wi-bod"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mlt-aj-5rD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="HEc-ZB-LU0" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="K3Z-QD-OBl">
+                    <connections>
+                        <segue destination="HEc-ZB-LU0" kind="unwind" unwindAction="goToThirdVCWithSender:" id="7ef-4U-f4e"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="202.89855072463769" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
