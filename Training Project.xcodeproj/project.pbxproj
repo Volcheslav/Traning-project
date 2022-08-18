@@ -11,6 +11,7 @@
 		53112F7E28AD30A000F9ADAC /* ImageFromURLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53112F7D28AD30A000F9ADAC /* ImageFromURLViewController.swift */; };
 		53112F8128AD334D00F9ADAC /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53112F8028AD334D00F9ADAC /* PersonModel.swift */; };
 		53112F8428AD33B900F9ADAC /* PersonURl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53112F8328AD33B900F9ADAC /* PersonURl.swift */; };
+		53112F8B28AD491700F9ADAC /* PersonRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53112F8A28AD491700F9ADAC /* PersonRealmModel.swift */; };
 		53376B8E289A756A00FB8AF2 /* LabelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53376B8D289A756A00FB8AF2 /* LabelProtocol.swift */; };
 		53376B94289A7A2600FB8AF2 /* BarsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53376B93289A7A2600FB8AF2 /* BarsProtocol.swift */; };
 		5338179928A10F410014DF3F /* ViewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5338179828A10F410014DF3F /* ViewImage.swift */; };
@@ -70,6 +71,7 @@
 		53112F7D28AD30A000F9ADAC /* ImageFromURLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFromURLViewController.swift; sourceTree = "<group>"; };
 		53112F8028AD334D00F9ADAC /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		53112F8328AD33B900F9ADAC /* PersonURl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonURl.swift; sourceTree = "<group>"; };
+		53112F8A28AD491700F9ADAC /* PersonRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRealmModel.swift; sourceTree = "<group>"; };
 		53376B8D289A756A00FB8AF2 /* LabelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelProtocol.swift; sourceTree = "<group>"; };
 		53376B93289A7A2600FB8AF2 /* BarsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarsProtocol.swift; sourceTree = "<group>"; };
 		5338179828A10F410014DF3F /* ViewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewImage.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				53112F8028AD334D00F9ADAC /* PersonModel.swift */,
+				53112F8A28AD491700F9ADAC /* PersonRealmModel.swift */,
 				53112F8328AD33B900F9ADAC /* PersonURl.swift */,
 			);
 			path = Model;
@@ -699,6 +702,7 @@
 			files = (
 				5340A85E28AA469000ABCE60 /* Training Project.xcdatamodeld in Sources */,
 				53400DEE28A3E6900024C6EF /* ExchangeVC.swift in Sources */,
+				53112F8B28AD491700F9ADAC /* PersonRealmModel.swift in Sources */,
 				5349C88728ABA83C002BF240 /* TableRealmCell.swift in Sources */,
 				53400DF128A3E8980024C6EF /* ExchangeStruct.swift in Sources */,
 				534278DB28A663E1008CA6D8 /* AlertWindows.swift in Sources */,

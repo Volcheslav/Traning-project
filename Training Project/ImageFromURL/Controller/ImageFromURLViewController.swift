@@ -4,11 +4,14 @@
 //
 //  Created by VironIT on 8/17/22.
 //
-
+import RealmSwift
 import UIKit
 
 class ImageFromURLViewController: UIViewController {
-    
+    // swiftlint:disable all
+    let realm = try! Realm()
+    var items: Results<PersonRealm>!
+    // swiftlint:enable all
     private var person: PersonModel?
     private var name: String?
     @IBOutlet private weak var nameLabel: UILabel!
@@ -17,21 +20,44 @@ class ImageFromURLViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        items = realm.objects(PersonRealm.self)
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.fromURLImageView.loadFrom(URLAddress: items.last!.imageURL)
+        self.nameLabel.text = "\(items.last!.name) \(items.last!.surname)"
         getImageURL()
         getNameFromURL()
     }
     
+    @IBAction private func saveInfoToRealm(_ sender: UIButton) {
+        guard let name = nameLabel.text?.components(separatedBy: .whitespaces).first,
+              let surname = nameLabel.text?.components(separatedBy: .whitespaces).last,
+              let imageURL = person?.imageURL else {
+            print("Cant save")
+            return
+        }
+        let person = PersonRealm()
+        person.name = name
+        person.surname = surname
+        person.imageURL = imageURL
+        // swiftlint:disable all
+        try! realm.write{
+            realm.add(person)
+            print("succes")
+        }
+        // swiftlint:enable all
+    }
+    
     @IBAction private func getPersonInfoFromURL(_ sender: UIButton) {
-        self.fromURLImageView.loadFrom(URLAddress: person!.imageURL)
-        self.nameLabel.text = self.name
         getImageURL()
         getNameFromURL()
+        self.fromURLImageView.loadFrom(URLAddress: person!.imageURL)
+        self.nameLabel.text = self.name
+        
     }
     
     @IBAction private func printinfo(_ sender: UIButton) {
@@ -86,30 +112,28 @@ class ImageFromURLViewController: UIViewController {
         task.resume()
         
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension UIImageView {
     func loadFrom(URLAddress: String) {
-        guard let url = URL(string: URLAddress) else {
-            return
-        }
-        
-        DispatchQueue.main.async { [weak self] in
-            if let imageData = try? Data(contentsOf: url) {
-                if let loadedImage = UIImage(data: imageData) {
-                        self?.image = loadedImage
-                }
+        guard let url = URL(string: URLAddress) else { return }
+
+        DispatchQueue.global(qos: .utility).async { [weak self] in
+            guard let imageData = try? Data(contentsOf: url),
+                  let loadedImage = UIImage(data: imageData) else { return }
+            DispatchQueue.main.async {
+                self?.image = loadedImage
             }
         }
     }
