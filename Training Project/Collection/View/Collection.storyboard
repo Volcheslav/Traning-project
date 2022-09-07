@@ -37,7 +37,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S3D-nA-P7X">
+                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="big bang" translatesAutoresizingMaskIntoConstraints="NO" id="S3D-nA-P7X">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <gestureRecognizers/>
                                         </imageView>
@@ -78,7 +78,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="NbH-5U-7EM">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="ntI-5H-ZIx">
-                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" id="8Mn-aO-lUB">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" id="8Mn-aO-lUB">
                                 <rect key="frame" x="231" y="5.5" width="163" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -161,6 +161,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="big bang" width="640" height="640"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
